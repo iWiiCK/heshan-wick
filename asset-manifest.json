@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/heshan-wick/static/js/main.a6b124c2.js",
+    "static/js/787.29f22e93.chunk.js": "/heshan-wick/static/js/787.29f22e93.chunk.js",
+    "index.html": "/heshan-wick/index.html",
+    "main.a6b124c2.js.map": "/heshan-wick/static/js/main.a6b124c2.js.map",
+    "787.29f22e93.chunk.js.map": "/heshan-wick/static/js/787.29f22e93.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.a6b124c2.js"
+  ]
+}
