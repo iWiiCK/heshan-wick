@@ -3,27 +3,58 @@ import Sketch from "react-p5";
 import theme from "../../../styles/theme";
 
 const MyNameAnimated = () => {
-  let myName = "HESHANWICK";
+  let bracketArray = ["<", "/", ">"];
+  let formattedBrackets;
+  let myName = "<heshanWick/>";
   let addedIndexes = [];
   let allIndexes = [];
-  let fontSize = 20;
-  let offsetX = myName.length + 5;
+  let fontSize = 25;
+  let textX, textY;
 
   const setup = (p5, canvasParentRef) => {
     p5.createCanvas(p5.windowWidth, p5.windowHeight).parent(canvasParentRef);
     for (let i = 0; i < myName.length; i++) {
       allIndexes.push(i);
     }
-    p5.frameRate(10);
+
+    formattedBrackets = formatBrackets();
   };
 
   const draw = (p5) => {
+    textX = (p5.windowWidth / 2) - 17;
+    textY = p5.windowHeight / 2;
+    
     p5.background(theme.background);
     p5.fill(255);
     p5.textAlign(p5.CENTER);
     p5.textSize(fontSize);
     p5.textFont("monospace");
-    p5.text(getBinaryName(p5), (p5.windowWidth / 2)-offsetX, p5.windowHeight / 2);
+    p5.frameRate(10);
+
+    p5.push();
+    p5.text(getBinaryName(p5), textX, textY);
+    p5.pop();
+
+    p5.push();
+    p5.fill(theme.backgroundGreen);
+    p5.text(disStyledBrackets(), textX, textY);
+    p5.pop();
+  };
+
+  const windowResized = (p5) => {
+    p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+  };
+
+  const disStyledBrackets = () => {
+    return addedIndexes.length == myName.length ? formattedBrackets : "";
+  };
+
+  const formatBrackets = () => {
+    let hiddenChar = " ";
+    for (let i = 0; i < myName.length - 3; i++) {
+      bracketArray.splice(1, 0, hiddenChar);
+    }
+    return bracketArray.toString().replaceAll(",", "");
   };
 
   //helper function for displaying the binary name
@@ -60,29 +91,16 @@ const MyNameAnimated = () => {
     for (let i = 0; i < myName.length; i++) {
       allIndexes.push(i);
     }
-  };
 
-  //Event Listeners
-  const touchStarted = (p5) => {
-    getAllArrayIndexes();
     addedIndexes = [];
-  };
-
-  const mouseClicked = (p5) => {
-    getAllArrayIndexes();
-    addedIndexes = [];
-  };
-
-  const windowResized = (p5) => {
-    p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
   };
 
   return (
     <Sketch
       setup={setup}
       draw={draw}
-      touchStarted={touchStarted}
-      mouseClicked={mouseClicked}
+      touchStarted={getAllArrayIndexes}
+      mouseClicked={getAllArrayIndexes}
       windowResized={windowResized}
     />
   );
