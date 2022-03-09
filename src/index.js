@@ -2,21 +2,23 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import HomeScreen from "./Pages/HomeScreen";
 import SplashScreen from "./Pages/SplashScreen";
 
+const baseUrl = process.env.PUBLIC_URL;
+
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter hashType = "noslash">
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/splash" element={<SplashScreen />} />
         <Route path="/home" element={<HomeScreen />} />
-        <Route path="*" element={<Navigate to="/home" />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
