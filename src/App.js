@@ -1,9 +1,9 @@
+import { Navigate } from "react-router-dom";
+import "./styles/styles.sass";
+
 const App = () => {
-  return (
-    <div>
-      <label>Website Under Construction</label>
-    </div>
-  );
+  return <Navigate to="/splash" />
 };
+
 
 export default App;

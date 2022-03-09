@@ -14,7 +14,7 @@ ReactDOM.render(
         <Route path="/" element={<App />} />
         <Route path="/splash" element={<SplashScreen />} />
         <Route path="/home" element={<HomeScreen />} />
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="*" element={<Navigate to="/home" />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
