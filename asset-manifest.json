@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/heshan-wick/static/css/main.29d132fa.css",
-    "main.js": "/heshan-wick/static/js/main.a1d5b07a.js",
+    "main.js": "/heshan-wick/static/js/main.d99e1394.js",
     "static/js/787.29f22e93.chunk.js": "/heshan-wick/static/js/787.29f22e93.chunk.js",
     "index.html": "/heshan-wick/index.html",
     "main.29d132fa.css.map": "/heshan-wick/static/css/main.29d132fa.css.map",
-    "main.a1d5b07a.js.map": "/heshan-wick/static/js/main.a1d5b07a.js.map",
+    "main.d99e1394.js.map": "/heshan-wick/static/js/main.d99e1394.js.map",
     "787.29f22e93.chunk.js.map": "/heshan-wick/static/js/787.29f22e93.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.29d132fa.css",
-    "static/js/main.a1d5b07a.js"
+    "static/js/main.d99e1394.js"
   ]
 }
