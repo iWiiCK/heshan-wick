@@ -6,14 +6,14 @@ import "./styles.sass";
 const SplashScreen = () => {
   const SPLASH_DURATION = 3; //in Seconds
   const [redirect, setRedirect] = useState(false);
-  // const timeOut = setTimeout(() => setRedirect(true), SPLASH_DURATION * 1000);
+  const timeOut = setTimeout(() => setRedirect(true), SPLASH_DURATION * 1000);
 
-  // //Cleaning the time out from useEffect
-  // useEffect(() => {
-  //   return () => {
-  //     clearTimeout(timeOut);
-  //   };
-  // }, []);
+  //Cleaning the time out from useEffect
+  useEffect(() => {
+    return () => {
+      clearTimeout(timeOut);
+    };
+  }, []);
 
   //Navigate to HomeScreen
   if (redirect) {
