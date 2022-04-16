@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/heshan-wick/static/css/main.29d132fa.css",
-    "main.js": "/heshan-wick/static/js/main.0bffe452.js",
+    "main.css": "/heshan-wick/static/css/main.a2622c91.css",
+    "main.js": "/heshan-wick/static/js/main.2eaecb25.js",
     "static/js/787.29f22e93.chunk.js": "/heshan-wick/static/js/787.29f22e93.chunk.js",
     "static/media/heshan-wick-business-card.mp4": "/heshan-wick/static/media/heshan-wick-business-card.8032554222153fbc96f6.mp4",
     "index.html": "/heshan-wick/index.html",
-    "main.29d132fa.css.map": "/heshan-wick/static/css/main.29d132fa.css.map",
-    "main.0bffe452.js.map": "/heshan-wick/static/js/main.0bffe452.js.map",
+    "main.a2622c91.css.map": "/heshan-wick/static/css/main.a2622c91.css.map",
+    "main.2eaecb25.js.map": "/heshan-wick/static/js/main.2eaecb25.js.map",
     "787.29f22e93.chunk.js.map": "/heshan-wick/static/js/787.29f22e93.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.29d132fa.css",
-    "static/js/main.0bffe452.js"
+    "static/css/main.a2622c91.css",
+    "static/js/main.2eaecb25.js"
   ]
 }
