@@ -21,7 +21,7 @@ const MyNameAnimated = () => {
   };
 
   const draw = (p5) => {
-    textX = (p5.windowWidth / 2) - 17;
+    textX = (p5.windowWidth / 2);
     textY = p5.windowHeight / 2;
     
     p5.background(theme.background);

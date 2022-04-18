@@ -10,12 +10,13 @@ const Header = () => {
             HESHAN <span>WICK</span>
           </label>
         </div>
-        <div className="menu">
-          <a> Home |</a>
-          <a> About Me |</a>
-          <a> Expertise |</a>
-          <a> Contact </a>
+        <div className="menu-extended">
+          <a href="#">Home</a>
+          <a href="#">About Me</a>
+          <a href="#">Expertise</a>
+          <a href="#">Contact</a>
         </div>
+
       </div>
     </div>
   );

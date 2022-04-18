@@ -21,7 +21,14 @@
             span
                 font-weight: bold
 
-        .menu
+        .menu-extended
             margin-left: auto
             order: 2
             padding-right: $wrapper-spacing
+
+            a
+                text-decoration: none
+                padding: 0px 15px
+
+            @media #{$xs-and-less}
+                display: none
