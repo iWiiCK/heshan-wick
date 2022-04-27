@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "@react-three/cannon": "^6.3.0",
     "@react-three/drei": "^9.5.3",
     "@react-three/fiber": "^8.0.12",
