@@ -51,7 +51,7 @@ const MyNameAnimated = () => {
 
   const formatBrackets = () => {
     let hiddenChar = " ";
-    for (let i = 0; i < myName.length - 3; i++) {
+    for (let i = 0; i < myName.length - 8; i++) {
       bracketArray.splice(1, 0, hiddenChar);
     }
     return bracketArray.toString().replaceAll(",", "");

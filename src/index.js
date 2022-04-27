@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
@@ -7,11 +7,11 @@ import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import HomeScreen from "./Pages/HomeScreen";
 import SplashScreen from "./Pages/SplashScreen";
 
-const baseUrl = process.env.PUBLIC_URL;
-
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(
   <React.StrictMode>
-    <HashRouter hashType = "noslash">
+    <HashRouter hashType="noslash">
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/splash" element={<SplashScreen />} />
@@ -20,7 +20,6 @@ ReactDOM.render(
       </Routes>
     </HashRouter>
   </React.StrictMode>,
-  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
