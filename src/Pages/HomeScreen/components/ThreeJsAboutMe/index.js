@@ -1,30 +1,31 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
 import { Physics } from '@react-three/cannon'
 import { Sparkles, Text, OrbitControls } from '@react-three/drei'
+import { Canvas, useFrame } from '@react-three/fiber'
 import theme from '../../../../styles/theme'
 import useWindowDimensions from '../../../../hooks/useWindowDimensions'
 
 const ThreeJsAboutMe = () => {
+    const mesh = useRef()
     const titleRef = useRef();
-    const { width } = useWindowDimensions();
+    const { width, height } = useWindowDimensions();
     const [titleFontSize, setTitleFontSize] = useState(0.5)
     const title = "Hello World!"
     const description =
         `I'm a 3rd year Software Engineering Undergraduate`;
 
     useEffect(() => {
-        if (width < 300) setTitleFontSize(0.3)
-        else if (width < 450) {
-            setTitleFontSize(0.4)
+        if (width < 350) setTitleFontSize(0.2)
+        else if (width < 500) {
+            setTitleFontSize(0.3)
         }
         else {
-            setTitleFontSize(0.5)
+            setTitleFontSize(0.4)
         }
     }, [width]);
 
     return (
-        <Canvas style={{ height: 600 }} >
+        <mesh style={{ height: '100vh' }} ref={mesh} position={[0, -height/120, 0]}>
             <Physics>
                 <OrbitControls
                     enablePan={false}
@@ -38,15 +39,14 @@ const ThreeJsAboutMe = () => {
                 <Sparkles scale={30} size={400} position={[0, 2, -3]} color={theme.backgroundGreen} count={5} />
                 <Sparkles scale={30} size={400} position={[0, 2, -3]} color={"blue"} count={5} />
 
-                {/* Description and Title 1 */}
                 <Text ref={titleRef} color="white" fontSize={titleFontSize} position={[0, 0, 2]}>
                     {title}
                 </Text>
-                <Text color="white" fontSize={titleFontSize * 0.4} position={[0, -0.5, 2]} textAlign="center" maxWidth={titleFontSize * 5} >
+                <Text color="white" fontSize={titleFontSize * 0.4} position={[0, -titleFontSize, 2]} textAlign="center" maxWidth={titleFontSize * 5} >
                     {description}
                 </Text>
             </Physics>
-        </Canvas>
+        </mesh>
     )
 }
 

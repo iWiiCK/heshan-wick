@@ -6,30 +6,33 @@
 
         .body-container
             .intro-section
+                height: 100vh
+
                 .video-container
+
                     video
-                        width: 100vw
+                        height: 100vh
+                        border-radius: 0 0 100% 0
 
                 .text
                     width: 40%
                     font-size: 3vw
                     position: absolute
                     top: 0px
-                    right: 2vw
+                    left: calc( 100vw - 50% )
                     text-align: right
+                    margin-top: 30px
                     padding: 50px
+                    z-index: 2
 
                     span
                         color: $backgroundGreen
 
-                    @media #{$xxs-and-less}
-                        position: static
+                    @media #{$xs-and-less}
                         text-align: center
-                        padding: 10px
-                        margin-left: auto
-                        margin-right: auto
-                        width: 100%
                         font-size: 6vw
+                        left: calc( 100vw - 25% )
+                        width: 20%
 
             .about-me-section
-                
+                height: 100vh
