@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Physics } from '@react-three/cannon'
-import { Sparkles, Text, OrbitControls } from '@react-three/drei'
+import { Sparkles, Text, OrbitControls, Billboard } from '@react-three/drei'
 import { Canvas, useFrame } from '@react-three/fiber'
 import theme from '../../../../styles/theme'
 import useWindowDimensions from '../../../../hooks/useWindowDimensions'
@@ -25,7 +25,7 @@ const ThreeJsAboutMe = () => {
     }, [width]);
 
     return (
-        <mesh style={{ height: '100vh' }} ref={mesh} position={[0, -height/120, 0]}>
+        <mesh style={{ height: '100vh' }} ref={mesh} position={[0, 0, 0]}>
             <Physics>
                 <OrbitControls
                     enablePan={false}
@@ -38,13 +38,14 @@ const ThreeJsAboutMe = () => {
                 <Sparkles scale={10} size={3} position={[0, -2, 0]} noise={3} />
                 <Sparkles scale={30} size={400} position={[0, 2, -3]} color={theme.backgroundGreen} count={5} />
                 <Sparkles scale={30} size={400} position={[0, 2, -3]} color={"blue"} count={5} />
-
-                <Text ref={titleRef} color="white" fontSize={titleFontSize} position={[0, 0, 2]}>
-                    {title}
-                </Text>
-                <Text color="white" fontSize={titleFontSize * 0.4} position={[0, -titleFontSize, 2]} textAlign="center" maxWidth={titleFontSize * 5} >
-                    {description}
-                </Text>
+                <Billboard>
+                    <Text ref={titleRef} color="white" fontSize={titleFontSize} position={[0, 0, 2]}>
+                        {title}
+                    </Text>
+                    <Text color="white" fontSize={titleFontSize * 0.4} position={[0, -titleFontSize, 2]} textAlign="center" maxWidth={titleFontSize * 5} >
+                        {description}
+                    </Text>
+                </Billboard>
             </Physics>
         </mesh>
     )

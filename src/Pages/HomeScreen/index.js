@@ -30,21 +30,24 @@ const HomeScreen = () => {
   return (
     <div className="home-screen-component-container">
       <div className="inner-component-container">
-        <div className="header-container">
+        {/* <div className="header-container">
           <Header />
-        </div>
+        </div> */}
         <div className="body-container">
 
           <Canvas style={{ height: '100vh' }} ref={canvasRef}>
             <ScrollControls
-              pages={2}
+              pages={1}
               distance={1} 
               damping={6}
               horizontal={false} 
               infinite={false} 
             >
-              <Scroll html>
-                {/* Intro Section */}
+              <Scroll>
+                <ThreeJsAboutMe />
+              </Scroll>
+              {/* Intro Section */}
+              {/* <Scroll html>
                 <section id="#intro-section" className="intro-section">
                   <div className="video-container">
                     <video loop autoPlay muted >
@@ -56,10 +59,7 @@ const HomeScreen = () => {
                     <h1>Creating <br /><span>{keyWord}</span><br /> things as a passion...</h1>
                   </div>
                 </section>
-              </Scroll>
-              <Scroll>
-                <ThreeJsAboutMe />
-              </Scroll>
+              </Scroll> */}
             </ScrollControls>
           </Canvas>
 
