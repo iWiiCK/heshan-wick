@@ -1,16 +1,17 @@
 {
   "files": {
     "main.css": "/heshan-wick/static/css/main.d3be44d2.css",
-    "main.js": "/heshan-wick/static/js/main.5ebbb9ee.js",
-    "static/js/787.29f22e93.chunk.js": "/heshan-wick/static/js/787.29f22e93.chunk.js",
+    "main.js": "/heshan-wick/static/js/main.156a79e5.js",
+    "static/js/787.5da2264d.chunk.js": "/heshan-wick/static/js/787.5da2264d.chunk.js",
+    "static/media/geometryGuyBlend.glb": "/heshan-wick/static/media/geometryGuyBlend.a67f62993097594b0faf.glb",
     "static/media/heshan-wick-business-card.mp4": "/heshan-wick/static/media/heshan-wick-business-card.8032554222153fbc96f6.mp4",
     "index.html": "/heshan-wick/index.html",
     "main.d3be44d2.css.map": "/heshan-wick/static/css/main.d3be44d2.css.map",
-    "main.5ebbb9ee.js.map": "/heshan-wick/static/js/main.5ebbb9ee.js.map",
-    "787.29f22e93.chunk.js.map": "/heshan-wick/static/js/787.29f22e93.chunk.js.map"
+    "main.156a79e5.js.map": "/heshan-wick/static/js/main.156a79e5.js.map",
+    "787.5da2264d.chunk.js.map": "/heshan-wick/static/js/787.5da2264d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d3be44d2.css",
-    "static/js/main.5ebbb9ee.js"
+    "static/js/main.156a79e5.js"
   ]
 }
