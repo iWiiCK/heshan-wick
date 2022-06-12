@@ -33,7 +33,7 @@ const ILikeToCreate = ({ position }) => {
                     {description}
                 </Text>
             </Billboard>
-            <GeometryGuy scale={2} position={[0, -4, 0]} rotation={[0, Math.PI, -Math.PI * 2]}/>
+            <GeometryGuy scale={2} position={[0, -4.2, 0]} rotation={[0, Math.PI, -Math.PI * 2]}/>
         </ColorUniverseWrapper>
     )
 }

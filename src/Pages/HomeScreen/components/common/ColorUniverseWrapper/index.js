@@ -7,7 +7,7 @@ const ColorUniverseWrapper = ({ children, position = [0, 0, 0], color1 = theme.b
     const mesh = useRef()
 
     return (
-        <mesh ref={mesh} position={position}>
+        <mesh ref={mesh} position={position} sty>
             <OrbitControls
                 enablePan={false}
                 enableZoom={false}
@@ -17,8 +17,8 @@ const ColorUniverseWrapper = ({ children, position = [0, 0, 0], color1 = theme.b
             <ambientLight />
             <pointLight position={[0, 800, 50]} intensity={100} color={"white"} />
             <Sparkles scale={10} size={3} position={[0, -2, 0]} noise={3} />
-            <Sparkles scale={30} size={400} position={[0, -2, -3]} color={color1} count={5} />
-            <Sparkles scale={30} size={400} position={[0, 2, -3]} color={color2} count={5} />
+            <Sparkles scale={30} size={400} position={[0, -2, -3]} color={color1} count={2} />
+            <Sparkles scale={30} size={400} position={[0, 2, -3]} color={color2} count={2} />
             {children}
         </mesh>
     )

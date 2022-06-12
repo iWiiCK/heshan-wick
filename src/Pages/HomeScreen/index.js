@@ -3,17 +3,19 @@ import myVideo from "../../assets/heshan-wick-business-card.mp4";
 import Header from "./components/Header";
 import ThreeJsAboutMe from "./components/ThreeJsAboutMe";
 import ILikeToCreate from "./components/ILikeToCreate";
+import MyNameAnimated from "../SplashScreen/MyNameAnimated";
+import WhereMagicHappens from "./components/WhereMagicHappens";
 import useRandomText from "../../hooks/useRandomText";
 import { keyWords } from "../../constants/homePage";
-import { ScrollControls, Scroll, Loader } from "@react-three/drei";
-import { Canvas, useFrame } from '@react-three/fiber'
+import { ScrollControls, Scroll, useProgress, Html } from "@react-three/drei";
+import { Canvas, useFrame } from "@react-three/fiber";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 
-import "./styles.sass"
+import "./styles.sass";
 
 const HomeScreen = () => {
   const keyWord = useRandomText(keyWords);
-  const canvasRef = useRef()
+  const canvasRef = useRef();
   const { height } = useWindowDimensions();
   const pageSpacing = -height / 130;
 
@@ -31,6 +33,15 @@ const HomeScreen = () => {
   //   lastScrollTop = st <= 0 ? 0 : st;
   // }
 
+  function Loader() {
+    const { active, progress, errors, item, loaded, total } = useProgress();
+    return (
+      <Html center style={{ textAlign: "center" }}>
+        <MyNameAnimated progress={progress}/>
+      </Html>
+    );
+  }
+
   return (
     <div className="home-screen-component-container">
       <div className="inner-component-container">
@@ -38,11 +49,10 @@ const HomeScreen = () => {
           <Header />
         </div> */}
         <div className="body-container">
-
-          <Canvas style={{ height: '100vh' }} ref={canvasRef}>
-            <Suspense fallback={null}>
+          <Canvas style={{ height: "100vh" }} ref={canvasRef}>
+            <Suspense fallback={<Loader />}>
               <ScrollControls
-                pages={2}
+                pages={3}
                 distance={1}
                 damping={6}
                 horizontal={false}
@@ -51,6 +61,7 @@ const HomeScreen = () => {
                 <Scroll>
                   <ThreeJsAboutMe position={[0, 0, 0]} />
                   <ILikeToCreate position={[0, pageSpacing * 1, 0]} />
+                  <WhereMagicHappens position={[0, pageSpacing * 2, 0]} />
                 </Scroll>
 
                 {/* Intro Section */}
@@ -69,9 +80,7 @@ const HomeScreen = () => {
               </Scroll> */}
               </ScrollControls>
             </Suspense>
-
           </Canvas>
-
         </div>
       </div>
     </div>

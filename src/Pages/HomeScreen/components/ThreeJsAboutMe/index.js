@@ -9,7 +9,7 @@ const ThreeJsAboutMe = ({ position }) => {
     const [titleFontSize, setTitleFontSize] = useState(0.5)
     const title = "Hello World!"
     const description =
-        `I am Heshan Wickramaratne`;
+        `I'm Heshan :D`;
 
     useEffect(() => {
         if (width < 350) setTitleFontSize(0.2)
