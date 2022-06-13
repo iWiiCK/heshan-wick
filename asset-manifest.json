@@ -1,15 +1,14 @@
 {
   "files": {
-    "main.css": "/heshan-wick/static/css/main.92e93cbf.css",
-    "main.js": "/heshan-wick/static/js/main.30fc457e.js",
+    "main.css": "/heshan-wick/static/css/main.a9819d90.css",
+    "main.js": "/heshan-wick/static/js/main.cde69b7a.js",
     "static/js/27.915ea9ce.chunk.js": "/heshan-wick/static/js/27.915ea9ce.chunk.js",
     "static/media/geometryGuyBlend.glb": "/heshan-wick/static/media/geometryGuyBlend.a67f62993097594b0faf.glb",
-    "static/media/heshan-wick-business-card.mp4": "/heshan-wick/static/media/heshan-wick-business-card.8032554222153fbc96f6.mp4",
     "static/media/plantAndLampBlend.glb": "/heshan-wick/static/media/plantAndLampBlend.a6ed76b128f768619776.glb",
     "index.html": "/heshan-wick/index.html"
   },
   "entrypoints": [
-    "static/css/main.92e93cbf.css",
-    "static/js/main.30fc457e.js"
+    "static/css/main.a9819d90.css",
+    "static/js/main.cde69b7a.js"
   ]
 }
