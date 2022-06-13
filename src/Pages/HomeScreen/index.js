@@ -1,19 +1,24 @@
 import React, { useState, useEffect, useRef, Suspense } from "react";
-import myVideo from "../../assets/heshan-wick-business-card.mp4";
-import Header from "./components/Header";
-import ThreeJsAboutMe from "./components/ThreeJsAboutMe";
-import ILikeToCreate from "./components/ILikeToCreate";
-import useRandomText from "../../hooks/useRandomText";
+import { ScrollControls, Scroll, useProgress, Html } from "@react-three/drei";
+import { Canvas, useFrame } from "@react-three/fiber";
+
+import CommonSection from "./components/common/CommonSection";
+
 import { keyWords } from "../../constants/homePage";
-import { ScrollControls, Scroll, Loader } from "@react-three/drei";
-import { Canvas, useFrame } from '@react-three/fiber'
+import myVideo from "../../assets/heshan-wick-business-card.mp4";
+import Header from "./components/common/Header";
+
+import GeometryGuy from "./blendComponents/GeometryGuy";
+import PlantAndLamp from "./blendComponents/PlantAndLamp";
+
+import useRandomText from "../../hooks/useRandomText";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 
-import "./styles.sass"
+import "./styles.sass";
 
 const HomeScreen = () => {
   const keyWord = useRandomText(keyWords);
-  const canvasRef = useRef()
+  const canvasRef = useRef();
   const { height } = useWindowDimensions();
   const pageSpacing = -height / 130;
 
@@ -31,6 +36,17 @@ const HomeScreen = () => {
   //   lastScrollTop = st <= 0 ? 0 : st;
   // }
 
+  function Loader() {
+    const { active, progress, errors, item, loaded, total } = useProgress();
+    return (
+      <Html center style={{ textAlign: "center" }}>
+        <div >
+          <h3 style={{ width: 300 }}>{`Loading... ${progress}%`}</h3>
+        </div>
+      </Html >
+    );
+  }
+
   return (
     <div className="home-screen-component-container">
       <div className="inner-component-container">
@@ -38,19 +54,40 @@ const HomeScreen = () => {
           <Header />
         </div> */}
         <div className="body-container">
-
-          <Canvas style={{ height: '100vh' }} ref={canvasRef}>
-            <Suspense fallback={null}>
+          <Canvas style={{ height: "100vh" }} ref={canvasRef}>
+            <Suspense fallback={<Loader />}>
               <ScrollControls
-                pages={2}
+                pages={3}
                 distance={1}
                 damping={6}
                 horizontal={false}
                 infinite={false}
               >
                 <Scroll>
-                  <ThreeJsAboutMe position={[0, 0, 0]} />
-                  <ILikeToCreate position={[0, pageSpacing * 1, 0]} />
+                  <CommonSection
+                    position={[0, 0, 0]}
+                    title="Hello World!"
+                    description="I'm Heshan"
+                    sectionWidth={5}
+                    id="section1"
+                  />
+
+                  <CommonSection
+                    position={[0, pageSpacing * 1, 0]}
+                    title="I Love to Create"
+                    description="3D Art and Software"
+                    threeJSModelTop={<GeometryGuy scale={2} position={[0, 4, 0]} rotation={[0, 0, Math.PI]} />}
+                    threeJSModelBottom={<GeometryGuy scale={2} position={[0, -4.2, 0]} rotation={[0, Math.PI, -Math.PI * 2]} />}
+                    id="section2"
+                  />
+
+                  <CommonSection
+                    position={[0, pageSpacing * 2, 0]}
+                    title="Where Magic Happens"
+                    description="Well... Almost :)"
+                    threeJSModelBottom={<PlantAndLamp scale={3} position={[0, -3, 0]} />}
+                    id="section3"
+                  />
                 </Scroll>
 
                 {/* Intro Section */}
@@ -69,9 +106,7 @@ const HomeScreen = () => {
               </Scroll> */}
               </ScrollControls>
             </Suspense>
-
           </Canvas>
-
         </div>
       </div>
     </div>
