@@ -1,14 +1,17 @@
 import React, { useState, useEffect, useRef, Suspense } from "react";
-import myVideo from "../../assets/heshan-wick-business-card.mp4";
-import Header from "./components/Header";
-import ThreeJsAboutMe from "./components/ThreeJsAboutMe";
-import ILikeToCreate from "./components/ILikeToCreate";
-import MyNameAnimated from "../SplashScreen/MyNameAnimated";
-import WhereMagicHappens from "./components/WhereMagicHappens";
-import useRandomText from "../../hooks/useRandomText";
-import { keyWords } from "../../constants/homePage";
 import { ScrollControls, Scroll, useProgress, Html } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
+
+import CommonSection from "./components/common/CommonSection";
+
+import { keyWords } from "../../constants/homePage";
+import myVideo from "../../assets/heshan-wick-business-card.mp4";
+import Header from "./components/common/Header";
+
+import GeometryGuy from "./blendComponents/GeometryGuy";
+import PlantAndLamp from "./blendComponents/PlantAndLamp";
+
+import useRandomText from "../../hooks/useRandomText";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 import "./styles.sass";
@@ -37,8 +40,10 @@ const HomeScreen = () => {
     const { active, progress, errors, item, loaded, total } = useProgress();
     return (
       <Html center style={{ textAlign: "center" }}>
-        <MyNameAnimated progress={progress}/>
-      </Html>
+        <div >
+          <h3 style={{ width: 300 }}>{`Loading... ${progress}%`}</h3>
+        </div>
+      </Html >
     );
   }
 
@@ -59,9 +64,30 @@ const HomeScreen = () => {
                 infinite={false}
               >
                 <Scroll>
-                  <ThreeJsAboutMe position={[0, 0, 0]} />
-                  <ILikeToCreate position={[0, pageSpacing * 1, 0]} />
-                  <WhereMagicHappens position={[0, pageSpacing * 2, 0]} />
+                  <CommonSection
+                    position={[0, 0, 0]}
+                    title="Hello World!"
+                    description="I'm Heshan"
+                    sectionWidth={5}
+                    id="section1"
+                  />
+
+                  <CommonSection
+                    position={[0, pageSpacing * 1, 0]}
+                    title="I Love to Create"
+                    description="3D Art and Software"
+                    threeJSModelTop={<GeometryGuy scale={2} position={[0, 4, 0]} rotation={[0, 0, Math.PI]} />}
+                    threeJSModelBottom={<GeometryGuy scale={2} position={[0, -4.2, 0]} rotation={[0, Math.PI, -Math.PI * 2]} />}
+                    id="section2"
+                  />
+
+                  <CommonSection
+                    position={[0, pageSpacing * 2, 0]}
+                    title="Where Magic Happens"
+                    description="Well... Almost :)"
+                    threeJSModelBottom={<PlantAndLamp scale={3} position={[0, -3, 0]} />}
+                    id="section3"
+                  />
                 </Scroll>
 
                 {/* Intro Section */}
