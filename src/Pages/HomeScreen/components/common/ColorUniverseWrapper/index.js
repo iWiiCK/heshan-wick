@@ -1,13 +1,13 @@
 import React, { useRef } from 'react'
-import { Physics } from '@react-three/cannon'
-import { Sparkles, OrbitControls } from '@react-three/drei'
+import { Sparkles, OrbitControls, useScroll } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
 import theme from '../../../../../styles/theme'
 
 const ColorUniverseWrapper = ({ children, position = [0, 0, 0], color1 = theme.backgroundGreen, color2 = "blue" }) => {
     const mesh = useRef()
 
     return (
-        <mesh ref={mesh} position={position} sty>
+        <mesh ref={mesh} position={position}>
             <OrbitControls
                 enablePan={false}
                 enableZoom={false}
