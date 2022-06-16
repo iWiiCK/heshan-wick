@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/heshan-wick/static/css/main.a9819d90.css",
-    "main.js": "/heshan-wick/static/js/main.2a065430.js",
+    "main.css": "/heshan-wick/static/css/main.f2dfcbdc.css",
+    "main.js": "/heshan-wick/static/js/main.f31a2f6d.js",
     "static/js/27.915ea9ce.chunk.js": "/heshan-wick/static/js/27.915ea9ce.chunk.js",
     "static/media/geometryGuyBlend.glb": "/heshan-wick/static/media/geometryGuyBlend.a67f62993097594b0faf.glb",
     "static/media/plantAndLampBlend.glb": "/heshan-wick/static/media/plantAndLampBlend.a6ed76b128f768619776.glb",
     "index.html": "/heshan-wick/index.html"
   },
   "entrypoints": [
-    "static/css/main.a9819d90.css",
-    "static/js/main.2a065430.js"
+    "static/css/main.f2dfcbdc.css",
+    "static/js/main.f31a2f6d.js"
   ]
 }
