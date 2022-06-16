@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, Suspense } from "react";
+import React, { useState, useRef, Suspense } from "react";
 import { ScrollControls, Scroll, useProgress, Html, Text, Billboard } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { isMobile } from "react-device-detect";
@@ -19,7 +19,7 @@ const Scene = ({ canvasRef }) => {
     const numOfPages = 3
     const scrollCursorSpeed = 0.05
     const scrollBottomBound = numOfPages * pageSpacing * -0.7
-    
+
 
     const Loader = () => {
         const { progress } = useProgress();
@@ -57,15 +57,15 @@ const Scene = ({ canvasRef }) => {
         );
     }
 
-    useFrame(({ camera }) => {
+    useFrame(({ camera, clock }) => {
         if (scrollDown && mesh.current?.position.y < scrollBottomBound)
             mesh.current.position.y += scrollCursorSpeed
         else if (scrollUp && mesh.current?.position.y > 0)
             mesh.current.position.y -= scrollCursorSpeed
 
-        // console.log(mesh.current?.position.y);
-        // console.log(isMobile);
-        // console.log(scrollBottomBound);
+        if (mesh.current) {
+            mesh.current.position.z += Math.sin(clock.elapsedTime) * 0.002
+        }
     });
 
 
@@ -85,7 +85,7 @@ const Scene = ({ canvasRef }) => {
                             title="Hello World!"
                             description="I'm Heshan"
                             sectionWidth={5}
-                            id="section1"
+                            hints="Click & Drag for 360 View"
                         />
 
                         <CommonSection
@@ -94,7 +94,6 @@ const Scene = ({ canvasRef }) => {
                             description="3D Art and Software"
                             threeJSModelTop={<GeometryGuy scale={2} position={[0, 4, 0]} rotation={[0, 0, Math.PI]} />}
                             threeJSModelBottom={<GeometryGuy scale={2} position={[0, -4.2, 0]} rotation={[0, Math.PI, -Math.PI * 2]} />}
-                            id="section2"
                         />
 
                         <CommonSection
@@ -102,7 +101,6 @@ const Scene = ({ canvasRef }) => {
                             title="Where Magic Happens"
                             description="Well... Almost :)"
                             threeJSModelBottom={<PlantAndLamp scale={3} position={[0, -3, 0]} />}
-                            id="section3"
                         />
                     </Scroll>
                 </ScrollControls>

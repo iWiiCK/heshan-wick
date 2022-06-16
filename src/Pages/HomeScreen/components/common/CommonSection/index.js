@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Text, Billboard, Html } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber'
+import { Text, Billboard } from '@react-three/drei'
 import useWindowDimensions from '../../../../../hooks/useWindowDimensions'
 import ColorUniverseWrapper from '../ColorUniverseWrapper'
 
@@ -12,7 +11,7 @@ const CommonSection = ({
     sectionWidth = 6,
     threeJSModelTop,
     threeJSModelBottom,
-    id
+    hints,
 }) => {
     const titleRef = useRef();
     const { width } = useWindowDimensions();
@@ -37,6 +36,9 @@ const CommonSection = ({
                 </Text>
                 <Text color="white" fontSize={titleFontSize * 0.4} position={[0, -titleFontSize - 0.1, 2]} textAlign="center" maxWidth={titleFontSize * (sectionWidth - 1)} >
                     {description}
+                </Text>
+                <Text color="white" fontSize={titleFontSize * 0.2} position={[0, -titleFontSize * 2 - 0.1, 2]} textAlign="center" maxWidth={titleFontSize * (sectionWidth - 1)} fillOpacity={0.7}>
+                    {hints}
                 </Text>
             </Billboard>
             {threeJSModelBottom}
