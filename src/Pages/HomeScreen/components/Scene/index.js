@@ -5,14 +5,16 @@ import { isMobile } from "react-device-detect";
 
 import CommonSection from "../common/CommonSection";
 import ColorUniverseWrapper from "../common/ColorUniverseWrapper";
+import useWindowDimensions from "../../../../hooks/useWindowDimensions";
 
 import GeometryGuy from "../../blendComponents/GeometryGuy";
 import PlantAndLamp from "../../blendComponents/PlantAndLamp";
 
 
 const Scene = ({ canvasRef }) => {
-    const pageSpacing = -100;
-    const pageSpacingOffset = 940;
+    const { width } = useWindowDimensions();
+    const pageSpacing = -width/10;
+    const pageSpacingOffset = width * 0.93 ;
     const mesh = useRef();
     const [scrollDown, setScrollDown] = useState(false);
     const [scrollUp, setScrollUp] = useState(false);
@@ -67,6 +69,10 @@ const Scene = ({ canvasRef }) => {
         if (mesh.current && scroll?.offset > 0) {
             mesh.current.position.z = scroll?.offset * pageSpacingOffset;
         }
+
+        camera.updateWorldMatrix()
+
+        console.log(width);
     });
 
 
@@ -83,7 +89,7 @@ const Scene = ({ canvasRef }) => {
                         />
 
                         <CommonSection
-                            position={[0, 0, pageSpacing * 1.004]}
+                            position={[0, 0, pageSpacing * 1.003]}
                             title="I Love to Create"
                             description="3D Art and Software"
                             threeJSModelTop={<GeometryGuy scale={2} position={[0, 4, 0]} rotation={[0, 0, Math.PI]} />}
@@ -91,7 +97,7 @@ const Scene = ({ canvasRef }) => {
                         />
 
                         <CommonSection
-                            position={[0, 0, pageSpacing * 2.008]}
+                            position={[0, 0, pageSpacing * 2]}
                             title="Where Magic Happens"
                             description="Well... Almost :)"
                             threeJSModelBottom={<PlantAndLamp scale={2} position={[0, -3, 0]} />}
