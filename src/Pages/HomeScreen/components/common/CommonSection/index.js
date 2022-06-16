@@ -1,9 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Text, Billboard, Html } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber'
+import { Text, Billboard } from '@react-three/drei'
 import useWindowDimensions from '../../../../../hooks/useWindowDimensions'
-import ColorUniverseWrapper from '../ColorUniverseWrapper'
-
 
 const CommonSection = ({
     position,
@@ -12,7 +9,8 @@ const CommonSection = ({
     sectionWidth = 6,
     threeJSModelTop,
     threeJSModelBottom,
-    id
+    scale = 1,
+    hints
 }) => {
     const titleRef = useRef();
     const { width } = useWindowDimensions();
@@ -29,18 +27,21 @@ const CommonSection = ({
     }, [width]);
 
     return (
-        <ColorUniverseWrapper position={position}>
+        <mesh position={position} scale={scale}>
             {threeJSModelTop}
-            <Billboard>
-                <Text ref={titleRef} color="white" fontSize={titleFontSize} position={[0, 0, 2]} textAlign="center" lineHeight={0.8} maxWidth={titleFontSize * sectionWidth}>
+            <Billboard >
+                <Text ref={titleRef} color="white" fontSize={titleFontSize} position={[0, 0, 2]} textAlign="center" lineHeight={0.8} maxWidth={titleFontSize * sectionWidth} >
                     {title}
                 </Text>
                 <Text color="white" fontSize={titleFontSize * 0.4} position={[0, -titleFontSize - 0.1, 2]} textAlign="center" maxWidth={titleFontSize * (sectionWidth - 1)} >
                     {description}
                 </Text>
+                <Text color="white" fontSize={titleFontSize * 0.2} position={[0, -titleFontSize * 2 - 0.1, 2]} textAlign="center" maxWidth={titleFontSize * (sectionWidth - 1)} fillOpacity={0.7}>
+                    {hints}
+                </Text>
             </Billboard>
             {threeJSModelBottom}
-        </ColorUniverseWrapper>
+        </mesh>
     )
 }
 
