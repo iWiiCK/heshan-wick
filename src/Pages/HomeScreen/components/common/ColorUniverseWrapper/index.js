@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { Sparkles, OrbitControls } from '@react-three/drei'
 import theme from '../../../../../styles/theme'
 
-const ColorUniverseWrapper = ({ children, position = [0, 0, 0], color1 = theme.backgroundGreen, color2 = "blue", visible = true }) => {
+const ColorUniverseWrapper = ({ children, position = [0, 0, 0], color1 = "cyan", color2 = "blue", visible = true }) => {
     const mesh = useRef()
 
     return (

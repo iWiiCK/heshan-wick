@@ -14,7 +14,7 @@ const HomeScreen = () => {
     <div className="home-screen-component-container">
       <div className="inner-component-container">
         <div className="body-container">
-          <Canvas style={{ height: "100vh" }} ref={canvasRef}>
+          <Canvas style={{ height: "100vh", minWidth: "600px", maxWidth: "2000px" }} ref={canvasRef}>
             <ScrollControls
               pages={isMobile ? 1 : numOfPages}
               distance={1}

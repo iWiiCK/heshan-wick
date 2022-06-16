@@ -9,7 +9,8 @@ const CommonSection = ({
     sectionWidth = 6,
     threeJSModelTop,
     threeJSModelBottom,
-    scale = 1
+    scale = 1,
+    hints
 }) => {
     const titleRef = useRef();
     const { width } = useWindowDimensions();
@@ -29,11 +30,14 @@ const CommonSection = ({
         <mesh position={position} scale={scale}>
             {threeJSModelTop}
             <Billboard >
-                <Text ref={titleRef} color="white" fontSize={titleFontSize} position={[0, 0, 2]} textAlign="center" lineHeight={0.8} maxWidth={titleFontSize * sectionWidth}>
+                <Text ref={titleRef} color="white" fontSize={titleFontSize} position={[0, 0, 2]} textAlign="center" lineHeight={0.8} maxWidth={titleFontSize * sectionWidth} >
                     {title}
                 </Text>
                 <Text color="white" fontSize={titleFontSize * 0.4} position={[0, -titleFontSize - 0.1, 2]} textAlign="center" maxWidth={titleFontSize * (sectionWidth - 1)} >
                     {description}
+                </Text>
+                <Text color="white" fontSize={titleFontSize * 0.2} position={[0, -titleFontSize * 2 - 0.1, 2]} textAlign="center" maxWidth={titleFontSize * (sectionWidth - 1)} fillOpacity={0.7}>
+                    {hints}
                 </Text>
             </Billboard>
             {threeJSModelBottom}

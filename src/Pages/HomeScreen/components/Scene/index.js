@@ -86,6 +86,7 @@ const Scene = ({ canvasRef }) => {
                             title="Hello World!"
                             description="I'm Heshan"
                             sectionWidth={5}
+                            hints="Click and Drag for 360 View"
                         />
 
                         <CommonSection
