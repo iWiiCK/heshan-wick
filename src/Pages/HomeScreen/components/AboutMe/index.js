@@ -61,7 +61,7 @@ const AboutMe = ({
                     <label className='title'>
                         Let's Connect
                     </label>
-                    <div className='flex-container'>
+                    <div className='flex-container flex-center'>
                         <SocialIcon
                             network="github"
                             bgColor='white'
