@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/heshan-wick/static/css/main.59156135.css",
-    "main.js": "/heshan-wick/static/js/main.c0bee3b8.js",
+    "main.js": "/heshan-wick/static/js/main.f83994f6.js",
     "static/js/27.8e57aaa2.chunk.js": "/heshan-wick/static/js/27.8e57aaa2.chunk.js",
     "static/media/geometryGuyBlend.glb": "/heshan-wick/static/media/geometryGuyBlend.a67f62993097594b0faf.glb",
     "static/media/plantAndLampBlend.glb": "/heshan-wick/static/media/plantAndLampBlend.a6ed76b128f768619776.glb",
@@ -9,6 +9,6 @@
   },
   "entrypoints": [
     "static/css/main.59156135.css",
-    "static/js/main.c0bee3b8.js"
+    "static/js/main.f83994f6.js"
   ]
 }
