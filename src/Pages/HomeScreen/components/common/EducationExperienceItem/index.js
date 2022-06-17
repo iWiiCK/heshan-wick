@@ -11,8 +11,8 @@ const EducationExperienceItem = ({ children, org, orgLink, duration, designation
     const displayWork = (workString) => {
         const works = workString.split("||");
 
-        return works.map((work) => {
-            return <li>{work}</li>
+        return works.map((work, i) => {
+            return <li key={i}>{work}</li>
         })
     }
     return (
