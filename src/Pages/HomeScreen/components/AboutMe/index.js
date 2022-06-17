@@ -97,6 +97,8 @@ const AboutMe = ({
                             duration="2021-2022"
                         >
                             {`
+                            Awarded, "Excellence Award for the Most Outstanding Intern"||
+
                             Front-end: Developed and extended UIs with React, React-Native, Redux, AntD along with a variety
                              of different libraries||
 
