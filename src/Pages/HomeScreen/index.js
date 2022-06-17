@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Scene from "./components/Scene";
 import { Canvas } from "@react-three/fiber";
 import AboutMe from "./components/AboutMe";
@@ -14,7 +14,9 @@ const HomeScreen = () => {
     <div className="home-screen-component-container">
       <div className="inner-component-container">
         <div className="body-container">
-          <Canvas ref={canvasRef} >
+          <Canvas ref={canvasRef} onClick={() => {
+            return aboutMeVisible ? setAboutMeVisible(false) : null
+          }}>
             <Scene
               canvasRef={canvasRef}
               aboutMeVisible={aboutMeVisible}
