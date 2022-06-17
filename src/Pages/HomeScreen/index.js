@@ -15,9 +15,12 @@ const HomeScreen = () => {
       <div className="inner-component-container">
         <div className="body-container">
           <Canvas ref={canvasRef} >
-            <Scene canvasRef={canvasRef} />
+            <Scene
+              canvasRef={canvasRef}
+              aboutMeVisible={aboutMeVisible}
+              setAboutMeVisible={setAboutMeVisible} />
           </Canvas>
-          {aboutMeVisible ? <AboutMe setAboutMeVisible={setAboutMeVisible}/> : null}
+          {aboutMeVisible ? <AboutMe setAboutMeVisible={setAboutMeVisible} /> : null}
           <div
             className="about-me-button"
             onClick={() => (setAboutMeVisible(true))}
