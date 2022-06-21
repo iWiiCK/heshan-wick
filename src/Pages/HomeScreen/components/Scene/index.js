@@ -1,4 +1,4 @@
-import React, { useState, useRef, Suspense } from "react";
+import React, { useState, useRef, Suspense, useEffect } from "react";
 import { ScrollControls, Scroll, useProgress, Html, Text, Billboard } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { isMobile } from "react-device-detect";
@@ -10,7 +10,7 @@ import PlantAndLamp from "../../blendComponents/PlantAndLamp";
 
 import useWindowDimensions from "../../../../hooks/useWindowDimensions";
 
-const Scene = ({ canvasRef }) => {
+const Scene = ({ setAboutMeVisible, aboutMeVisible }) => {
     const { height } = useWindowDimensions();
     const pageSpacing = -height / 130;
     const mesh = useRef();
@@ -19,13 +19,19 @@ const Scene = ({ canvasRef }) => {
     const numOfPages = 3
     const scrollCursorSpeed = 0.05
     const scrollBottomBound = numOfPages * pageSpacing * -0.7
+    const aboutMeVisibleOffset = -0.5
 
 
     const Loader = () => {
         const { progress } = useProgress();
+
+        useEffect(() => { 
+            return () => setAboutMeVisible(true)
+        },[]);
+
         return (
             <Html center style={{ textAlign: "center" }}>
-                <div >
+                <div>
                     <h3 style={{ width: 200 }}>{`Loading... ${progress}%`}</h3>
                     <h5 style={{ width: 200 }}>{`Awesomeness can take a bit of time loading for the first time :)`}</h5>
                 </div>

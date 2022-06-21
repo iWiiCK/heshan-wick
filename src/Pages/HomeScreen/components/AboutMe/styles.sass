@@ -1,0 +1,79 @@
+
+.about-me-outer-container
+    background-color: rgba(0, 0, 0, 0.7)
+    width: 30vw
+    height: 90vh
+    position: absolute
+    top: 50px
+    right: 50px
+    border-radius: 10px
+    min-width: 300px
+
+    .about-me-inner-container
+        overflow-y: scroll
+        -ms-overflow-style: none
+        scrollbar-width: none
+        padding: 30px
+        line-height: 22px
+        text-align: left
+        height: 90%
+        margin-top: 20px
+
+        hr
+            margin: 30px 0px
+
+        svg
+            fill: white
+            width: 50px
+            height: 50px
+
+        .title
+            color: cyan
+            padding: 20px 0px
+
+        .invert
+            path 
+                fill: white
+
+        .flex-container
+            padding-top: 20px
+            padding-left: 10px
+            padding-right: 10px
+            display: flex
+            justify-content: flex-start
+            gap: 20px
+            flex-wrap: wrap
+
+        .flex-center
+            justify-content: center
+
+        .close-button-container
+            float: right
+            font-size: 20px
+            margin-top: -10px
+
+            &:hover
+                color: cyan
+                cursor: pointer
+
+            svg
+                width: 30px
+                height: 30px
+
+        .version-controlling-section
+            g 
+                fill: white
+
+        .connect-with-me-section
+            .social-container
+                width: 80% !important
+                height: 80% !important
+
+                .social-svg
+                    border-radius: 10px !important
+
+                .social-svg-mask
+                    path
+                        &:hover
+                            fill: cyan
+                            cursor: pointer
