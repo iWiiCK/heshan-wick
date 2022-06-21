@@ -98,8 +98,8 @@ const Scene = ({ setAboutMeVisible, aboutMeVisible }) => {
                             position={[0, pageSpacing * 1, 0]}
                             title="I Love to Create"
                             description="3D Art and Software"
-                            threeJSModelTop={<GeometryGuy scale={2} position={[0, 4, 0]} rotation={[0, 0, Math.PI]} />}
-                            threeJSModelBottom={<GeometryGuy scale={2} position={[0, -4.2, 0]} rotation={[0, Math.PI, -Math.PI * 2]} />}
+                            threeJSModelTop={<GeometryGuy scale={2} position={[0, 5, 0]} rotation={[0, 0, Math.PI]} />}
+                            threeJSModelBottom={<GeometryGuy scale={2} position={[0, -5.5, 0]} rotation={[0, Math.PI, -Math.PI * 2]} />}
                         />
 
                         <CommonSection
