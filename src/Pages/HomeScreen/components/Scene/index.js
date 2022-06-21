@@ -33,7 +33,7 @@ const Scene = ({ setAboutMeVisible, aboutMeVisible }) => {
         return (
             <Html center style={{ textAlign: "center" }}>
                 <div>
-                    <h3 style={{ width: 200 }}>{`Loading... ${progress}%`}</h3>
+                    <h3 style={{ width: 200 }}>{`Loading... ${Math.trunc(progress)}%`}</h3>
                     <h5 style={{ width: 200 }}>{`Awesomeness can take a bit of time loading for the first time :)`}</h5>
                 </div>
             </Html >
