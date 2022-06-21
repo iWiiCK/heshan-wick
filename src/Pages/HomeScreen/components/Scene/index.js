@@ -9,6 +9,7 @@ import GeometryGuy from "../../blendComponents/GeometryGuy";
 import PlantAndLamp from "../../blendComponents/PlantAndLamp";
 
 import useWindowDimensions from "../../../../hooks/useWindowDimensions";
+import GeoHands from "../../blendComponents/GeoHands";
 
 const Scene = ({ setAboutMeVisible, aboutMeVisible }) => {
     const { height } = useWindowDimensions();
@@ -16,7 +17,7 @@ const Scene = ({ setAboutMeVisible, aboutMeVisible }) => {
     const mesh = useRef();
     const [scrollDown, setScrollDown] = useState(false);
     const [scrollUp, setScrollUp] = useState(false);
-    const numOfPages = 3
+    const numOfPages = 4
     const scrollCursorSpeed = 0.05
     const scrollBottomBound = numOfPages * pageSpacing * -0.7
     const aboutMeVisibleOffset = -0.5
@@ -25,9 +26,9 @@ const Scene = ({ setAboutMeVisible, aboutMeVisible }) => {
     const Loader = () => {
         const { progress } = useProgress();
 
-        useEffect(() => { 
+        useEffect(() => {
             return () => setAboutMeVisible(true)
-        },[]);
+        }, []);
 
         return (
             <Html center style={{ textAlign: "center" }}>
@@ -106,7 +107,14 @@ const Scene = ({ setAboutMeVisible, aboutMeVisible }) => {
                             position={[0, pageSpacing * 2, 0]}
                             title="Where Magic Happens"
                             description="Well... Almost :)"
-                            threeJSModelBottom={<PlantAndLamp scale={3} position={[0, -3, 0]} />}
+                            threeJSModelBottom={<PlantAndLamp scale={2.5} position={[0, -2.5, 0]} />}
+                        />
+
+                        <CommonSection
+                            position={[0, pageSpacing * 3, 0]}
+                            title="Let's Connect"
+                            description="Getting to know folks is amazing :)"
+                            threeJSModelBottom={<GeoHands scale={4} position={[0, -2, 0]} />}
                         />
                     </Scroll>
                 </ScrollControls>
