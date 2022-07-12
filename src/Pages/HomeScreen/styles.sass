@@ -3,36 +3,19 @@
 .home-screen-component-container
     .inner-component-container
         .header-container
-
         .body-container
-            .intro-section
+            canvas
                 height: 100vh
+                z-index: 2
 
-                .video-container
+            .about-me-button
+                background-color: rgba(0, 0, 0, 0.7)
+                position: absolute
+                right: 50px
+                bottom: 0px
+                padding: 20px
+                border-radius: 20px 20px 0px 0px
 
-                    video
-                        height: 100vh
-                        border-radius: 0 0 100% 0
-
-                .text
-                    width: 40%
-                    font-size: 3vw
-                    position: absolute
-                    top: 0px
-                    left: calc( 100vw - 50% )
-                    text-align: right
-                    margin-top: 30px
-                    padding: 50px
-                    z-index: 2
-
-                    span
-                        color: $backgroundGreen
-
-                    @media #{$xs-and-less}
-                        text-align: center
-                        font-size: 6vw
-                        left: calc( 100vw - 25% )
-                        width: 20%
-
-            .about-me-section
-                height: 100vh
+                &:hover
+                    color: cyan
+                    cursor: pointer

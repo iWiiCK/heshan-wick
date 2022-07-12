@@ -2,7 +2,7 @@ import React from "react";
 import Sketch from "react-p5";
 import theme from "../../../styles/theme";
 
-const MyNameAnimated = () => {
+const MyNameAnimated = ({ progress = 0 }) => {
   let bracketArray = ["<", "/", ">"];
   let formattedBrackets;
   let myName = "<heshanWick/>";
@@ -21,9 +21,9 @@ const MyNameAnimated = () => {
   };
 
   const draw = (p5) => {
-    textX = (p5.windowWidth / 2);
+    textX = p5.windowWidth / 2;
     textY = p5.windowHeight / 2;
-    
+
     p5.background(theme.background);
     p5.fill(255);
     p5.textAlign(p5.CENTER);
@@ -39,6 +39,14 @@ const MyNameAnimated = () => {
     p5.fill(theme.backgroundGreen);
     p5.text(disStyledBrackets(), textX, textY);
     p5.pop();
+
+    if (progress) { 
+      p5.push();
+      p5.fill(255);
+      p5.textSize(15);
+      p5.text(`Loading ${progress}% `, textX, textY + 50);
+      p5.pop();
+    }
   };
 
   const windowResized = (p5) => {
