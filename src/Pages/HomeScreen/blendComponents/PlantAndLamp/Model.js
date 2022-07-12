@@ -1,11 +1,10 @@
 import React, { useRef } from "react";
 import { useGLTF, PerspectiveCamera, useAnimations } from "@react-three/drei";
-import plantAndLampBlend from "../../../../assets/plantAndLampBlend.glb";
+import plantAndLampBlend from "../../../../assets/plantAndLamp.glb";
 
 export default function Model(props) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(plantAndLampBlend);
-  const { actions } = useAnimations(animations, group);
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">

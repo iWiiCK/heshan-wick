@@ -9,6 +9,7 @@ import GeometryGuy from "../../blendComponents/GeometryGuy";
 import PlantAndLamp from "../../blendComponents/PlantAndLamp";
 
 import useWindowDimensions from "../../../../hooks/useWindowDimensions";
+import GeoHands from "../../blendComponents/GeoHands";
 
 const Scene = ({ setAboutMeVisible, aboutMeVisible }) => {
     const { height } = useWindowDimensions();
@@ -16,7 +17,7 @@ const Scene = ({ setAboutMeVisible, aboutMeVisible }) => {
     const mesh = useRef();
     const [scrollDown, setScrollDown] = useState(false);
     const [scrollUp, setScrollUp] = useState(false);
-    const numOfPages = 3
+    const numOfPages = 4
     const scrollCursorSpeed = 0.05
     const scrollBottomBound = numOfPages * pageSpacing * -0.7
     const aboutMeVisibleOffset = -0.5
@@ -25,14 +26,14 @@ const Scene = ({ setAboutMeVisible, aboutMeVisible }) => {
     const Loader = () => {
         const { progress } = useProgress();
 
-        useEffect(() => { 
+        useEffect(() => {
             return () => setAboutMeVisible(true)
-        },[]);
+        }, []);
 
         return (
             <Html center style={{ textAlign: "center" }}>
                 <div>
-                    <h3 style={{ width: 200 }}>{`Loading... ${progress}%`}</h3>
+                    <h3 style={{ width: 200 }}>{`Loading... ${Math.trunc(progress)}%`}</h3>
                     <h5 style={{ width: 200 }}>{`Awesomeness can take a bit of time loading for the first time :)`}</h5>
                 </div>
             </Html >
@@ -98,15 +99,22 @@ const Scene = ({ setAboutMeVisible, aboutMeVisible }) => {
                             position={[0, pageSpacing * 1, 0]}
                             title="I Love to Create"
                             description="3D Art and Software"
-                            threeJSModelTop={<GeometryGuy scale={2} position={[0, 4, 0]} rotation={[0, 0, Math.PI]} />}
-                            threeJSModelBottom={<GeometryGuy scale={2} position={[0, -4.2, 0]} rotation={[0, Math.PI, -Math.PI * 2]} />}
+                            threeJSModelTop={<GeometryGuy scale={2} position={[0, 5, 0]} rotation={[0, 0, Math.PI]} />}
+                            threeJSModelBottom={<GeometryGuy scale={2} position={[0, -5.5, 0]} rotation={[0, Math.PI, -Math.PI * 2]} />}
                         />
 
                         <CommonSection
                             position={[0, pageSpacing * 2, 0]}
                             title="Where Magic Happens"
                             description="Well... Almost :)"
-                            threeJSModelBottom={<PlantAndLamp scale={3} position={[0, -3, 0]} />}
+                            threeJSModelBottom={<PlantAndLamp scale={2.5} position={[0, -2.5, 0]} />}
+                        />
+
+                        <CommonSection
+                            position={[0, pageSpacing * 3, 0]}
+                            title="Let's Connect"
+                            description="Getting to know folks is amazing :)"
+                            threeJSModelBottom={<GeoHands scale={4} position={[0, -2, 0]} />}
                         />
                     </Scroll>
                 </ScrollControls>
