@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import Scene from "./components/Scene";
 import { Canvas } from "@react-three/fiber";
 import AboutMe from "./components/AboutMe";
@@ -8,24 +8,30 @@ import "./styles.sass";
 
 const HomeScreen = () => {
   const canvasRef = useRef();
-  const [aboutMeVisible, setAboutMeVisible] = useState(false)
+  const [aboutMeVisible, setAboutMeVisible] = useState(false);
 
   return (
     <div className="home-screen-component-container">
       <div className="inner-component-container">
         <div className="body-container">
-          <Canvas ref={canvasRef} onClick={() => {
-            return aboutMeVisible ? setAboutMeVisible(false) : null
-          }}>
+          <Canvas
+            ref={canvasRef}
+            onClick={() => {
+              return aboutMeVisible ? setAboutMeVisible(false) : null;
+            }}
+          >
             <Scene
               canvasRef={canvasRef}
               aboutMeVisible={aboutMeVisible}
-              setAboutMeVisible={setAboutMeVisible} />
+              setAboutMeVisible={setAboutMeVisible}
+            />
           </Canvas>
-          {aboutMeVisible ? <AboutMe setAboutMeVisible={setAboutMeVisible} /> : null}
+          {aboutMeVisible ? (
+            <AboutMe setAboutMeVisible={setAboutMeVisible} />
+          ) : null}
           <div
             className="about-me-button"
-            onClick={() => (setAboutMeVisible(true))}
+            onClick={() => setAboutMeVisible(true)}
             style={{ display: aboutMeVisible ? "none" : "block" }}
           >
             About me <UpCircleOutlined />

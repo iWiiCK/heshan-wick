@@ -29,4 +29,3 @@ export default function Model(props) {
 }
 
 useGLTF.preload(geoHands);
-

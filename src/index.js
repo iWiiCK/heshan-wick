@@ -1,5 +1,5 @@
 import React from "react";
-import { createRoot } from 'react-dom/client';
+import { createRoot } from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
@@ -7,7 +7,7 @@ import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import HomeScreen from "./Pages/HomeScreen";
 import SplashScreen from "./Pages/SplashScreen";
 
-const container = document.getElementById('root');
+const container = document.getElementById("root");
 const root = createRoot(container);
 root.render(
   <React.StrictMode>
@@ -19,7 +19,7 @@ root.render(
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </HashRouter>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

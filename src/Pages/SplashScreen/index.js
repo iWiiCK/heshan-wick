@@ -13,7 +13,7 @@ const SplashScreen = () => {
     return () => {
       clearTimeout(timeOut);
     };
-  }, []);
+  }, [timeOut]);
 
   //Navigate to HomeScreen
   if (redirect) {
@@ -24,7 +24,7 @@ const SplashScreen = () => {
   return (
     <div className="splash-screen-component-container">
       <div className="splash-screen-inner-container">
-        <MyNameAnimated/>
+        <MyNameAnimated />
       </div>
     </div>
   );
