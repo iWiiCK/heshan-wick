@@ -135,7 +135,7 @@ const Scene = ({ setAboutMeVisible }) => {
         <ScrollControls
           pages={isMobile ? 1 : numOfPages}
           distance={1}
-          damping={6}
+          damping={1}
           horizontal={false}
           infinite={false}
         >
