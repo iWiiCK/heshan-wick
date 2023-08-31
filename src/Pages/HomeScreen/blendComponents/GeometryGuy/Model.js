@@ -273,4 +273,3 @@ export default function Model(props) {
 }
 
 useGLTF.preload(geometryGuy);
-

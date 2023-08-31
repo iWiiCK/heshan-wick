@@ -40,7 +40,7 @@ const MyNameAnimated = ({ progress = 0 }) => {
     p5.text(disStyledBrackets(), textX, textY);
     p5.pop();
 
-    if (progress) { 
+    if (progress) {
       p5.push();
       p5.fill(255);
       p5.textSize(15);
@@ -54,7 +54,7 @@ const MyNameAnimated = ({ progress = 0 }) => {
   };
 
   const disStyledBrackets = () => {
-    return addedIndexes.length == myName.length ? formattedBrackets : "";
+    return addedIndexes.length === myName.length ? formattedBrackets : "";
   };
 
   const formatBrackets = () => {
@@ -71,7 +71,7 @@ const MyNameAnimated = ({ progress = 0 }) => {
     let randomChar, randomIndex;
 
     //return just the name if it's complete
-    if (addedIndexes.length == myName.length) {
+    if (addedIndexes.length === myName.length) {
       return myName;
     }
 
@@ -84,7 +84,7 @@ const MyNameAnimated = ({ progress = 0 }) => {
     randomIndex = p5.random(allIndexes);
     addedIndexes.push(randomIndex);
     allIndexes = allIndexes.filter((currentIndex) => {
-      return currentIndex != randomIndex;
+      return currentIndex !== randomIndex;
     });
 
     for (let i = 0; i < addedIndexes.length; i++) {
