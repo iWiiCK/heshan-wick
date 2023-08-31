@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/heshan-wick/static/css/main.c36b8f20.css",
+    "main.js": "/heshan-wick/static/js/main.e660f6d5.js",
+    "static/js/27.8e57aaa2.chunk.js": "/heshan-wick/static/js/27.8e57aaa2.chunk.js",
+    "static/media/geometryGuy.glb": "/heshan-wick/static/media/geometryGuy.f6c99d81a78be4129ab9.glb",
+    "static/media/plantAndLamp.glb": "/heshan-wick/static/media/plantAndLamp.a6ed76b128f768619776.glb",
+    "static/media/GeoHands.glb": "/heshan-wick/static/media/GeoHands.d05d4f88f84339c1c7c1.glb",
+    "index.html": "/heshan-wick/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.c36b8f20.css",
+    "static/js/main.e660f6d5.js"
+  ]
+}
