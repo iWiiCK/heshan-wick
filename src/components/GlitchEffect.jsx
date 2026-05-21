@@ -45,9 +45,20 @@ export default function GlitchEffect() {
 
   useEffect(() => {
     const activeWords = new Map();
+    let idleTimeoutId = null;
+
+    const resetIdleTimer = () => {
+      if (idleTimeoutId) clearTimeout(idleTimeoutId);
+      // Random interval between 20000ms (20s) and 40000ms (40s)
+      const delay = Math.random() * 20000 + 20000;
+      idleTimeoutId = setTimeout(() => {
+        triggerGlitch();
+      }, delay);
+    };
 
     // --- Full-page glitch on click and section change ---
     const triggerGlitch = () => {
+      resetIdleTimer();
       if (isRunning.current) return;
       isRunning.current = true;
 
@@ -154,6 +165,9 @@ export default function GlitchEffect() {
     });
 
     document.addEventListener('click', triggerGlitch);
+
+    // Initialize the idle timer on mount
+    resetIdleTimer();
 
     // --- Per-word hover glitch ---
     const wrapTextInSpans = (el) => {
@@ -316,6 +330,7 @@ export default function GlitchEffect() {
     document.addEventListener('mouseout', handleMouseOut);
 
     return () => {
+      if (idleTimeoutId) clearTimeout(idleTimeoutId);
       document.removeEventListener('click', triggerGlitch);
       document.removeEventListener('mouseover', handleMouseOver);
       document.removeEventListener('mouseout', handleMouseOut);

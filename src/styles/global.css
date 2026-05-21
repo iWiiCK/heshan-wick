@@ -191,6 +191,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ========================================
+   RESUME BUTTON
+   ======================================== */
+.resume-button {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  opacity: 0.6;
+  mix-blend-mode: difference;
+  text-decoration: none;
+}
+
+.resume-button:hover {
+  opacity: 1;
+}
+
+/* ========================================
    SECTION INDICATOR (right side dots)
    ======================================== */
 .section-indicator {

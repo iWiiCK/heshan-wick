@@ -13,6 +13,7 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import GlitchEffect from './components/GlitchEffect';
+import ResumeButton from './components/ResumeButton';
 
 const sectionIds = ['hero', 'about', 'experience', 'achievements', 'education', 'skills', 'contact'];
 
@@ -100,6 +101,7 @@ export default function App() {
       <ThreeScene onCreated={handleThreeCreated} />
       <Navbar currentSection={currentSection} />
       <SectionIndicator currentSection={currentSection} />
+      <ResumeButton />
       <main className="content-wrapper">
         <Hero />
         <About />
