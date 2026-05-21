@@ -12,6 +12,7 @@ import Achievements from './components/Achievements';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import GlitchEffect from './components/GlitchEffect';
 
 const sectionIds = ['hero', 'about', 'experience', 'achievements', 'education', 'skills', 'contact'];
 
@@ -95,6 +96,7 @@ export default function App() {
   return (
     <>
       <Loader ready={threeReady} />
+      <GlitchEffect />
       <ThreeScene onCreated={handleThreeCreated} />
       <Navbar currentSection={currentSection} />
       <SectionIndicator currentSection={currentSection} />

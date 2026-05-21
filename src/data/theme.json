@@ -16,6 +16,10 @@
     "body": "'Inter', sans-serif",
     "mono": "'JetBrains Mono', monospace"
   },
+  "glitch": {
+    "durationMs": 1000,
+    "charset": "01"
+  },
   "particles": {
     "count": 1200,
     "countMobile": 400,
