@@ -5,7 +5,7 @@ const sections = ['About', 'Experience', 'Skills', 'Contact'];
 export default function Navbar({ currentSection }) {
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (

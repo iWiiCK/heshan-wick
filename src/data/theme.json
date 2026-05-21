@@ -18,6 +18,7 @@
   },
   "glitch": {
     "durationMs": 500,
+    "hoverDurationMs": 300,
     "charset": "01"
   },
   "particles": {
