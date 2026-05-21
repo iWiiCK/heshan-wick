@@ -1,0 +1,28 @@
+{
+  "colors": {
+    "background": "#0a0a0a",
+    "backgroundAlt": "#111111",
+    "surface": "#1a1a1a",
+    "surfaceHover": "#222222",
+    "text": "#ffffff",
+    "textSecondary": "#b0b0b0",
+    "textMuted": "#777777",
+    "accent": "#ffffff",
+    "border": "#1e1e1e",
+    "borderLight": "#3a3a3a"
+  },
+  "fonts": {
+    "heading": "'Space Grotesk', sans-serif",
+    "body": "'Inter', sans-serif",
+    "mono": "'JetBrains Mono', monospace"
+  },
+  "particles": {
+    "count": 1200,
+    "countMobile": 400,
+    "color": "#ffffff",
+    "size": 1.0,
+    "speed": 0.15,
+    "opacity": 0.6,
+    "spread": 5.0
+  }
+}
