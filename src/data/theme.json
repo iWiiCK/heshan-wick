@@ -17,14 +17,14 @@
     "mono": "'JetBrains Mono', monospace"
   },
   "glitch": {
-    "durationMs": 1000,
+    "durationMs": 500,
     "charset": "01"
   },
   "particles": {
-    "count": 1200,
-    "countMobile": 400,
+    "count": 60,
+    "countMobile": 30,
     "color": "#ffffff",
-    "size": 1.0,
+    "size": 0.05,
     "speed": 0.15,
     "opacity": 0.6,
     "spread": 5.0

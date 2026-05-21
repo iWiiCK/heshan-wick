@@ -2,26 +2,37 @@ import { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import store from '../store';
+import theme from '../data/theme.json';
 
-const NODE_COUNT = 60;
+const cfg = theme.particles;
+const NODE_COUNT = cfg.count || 60;
 const CONNECTION_DIST = 3.0;
 const MAX_LINES = (NODE_COUNT * (NODE_COUNT - 1)) / 2;
+const BASE_SIZE = (cfg.size || 1.0) * 50;
+const SPEED = cfg.speed || 0.15;
+const OPACITY = cfg.opacity || 0.6;
+const SPREAD = cfg.spread || 5.0;
 
 export default function NetworkLines() {
   const linesRef = useRef();
   const dotsRef = useRef();
 
-  const { nodeData, linePositions, lineAlphas, dotPositions } = useMemo(() => {
+  const { nodeData, linePositions, lineAlphas, dotPositions, dotSizes, dotTypes } = useMemo(() => {
     const nodes = [];
+    const sizes = new Float32Array(NODE_COUNT);
+    const types = new Float32Array(NODE_COUNT);
+
     for (let i = 0; i < NODE_COUNT; i++) {
       nodes.push({
         x: (Math.random() - 0.5) * 18,
         y: (Math.random() - 0.5) * 12,
-        z: (Math.random() - 0.5) * 3,
-        vx: (Math.random() - 0.5) * 0.003,
-        vy: (Math.random() - 0.5) * 0.003,
+        z: (Math.random() - 0.5) * SPREAD * 0.6,
+        vx: (Math.random() - 0.5) * SPEED * 0.02,
+        vy: (Math.random() - 0.5) * SPEED * 0.02,
         phase: Math.random() * Math.PI * 2,
       });
+      sizes[i] = BASE_SIZE * (0.3 + Math.random() * 1.0);
+      types[i] = Math.random() > 0.5 ? 1.0 : 0.0;
     }
 
     return {
@@ -29,6 +40,8 @@ export default function NetworkLines() {
       linePositions: new Float32Array(MAX_LINES * 6),
       lineAlphas: new Float32Array(MAX_LINES * 2),
       dotPositions: new Float32Array(NODE_COUNT * 3),
+      dotSizes: sizes,
+      dotTypes: types,
     };
   }, []);
 
@@ -141,13 +154,52 @@ export default function NetworkLines() {
             count={NODE_COUNT}
             itemSize={3}
           />
+          <bufferAttribute
+            attach="attributes-aSize"
+            array={dotSizes}
+            count={NODE_COUNT}
+            itemSize={1}
+          />
+          <bufferAttribute
+            attach="attributes-aType"
+            array={dotTypes}
+            count={NODE_COUNT}
+            itemSize={1}
+          />
         </bufferGeometry>
-        <pointsMaterial
-          size={1.5}
-          sizeAttenuation
-          color="#ffffff"
+        <shaderMaterial
           transparent
-          opacity={0.08}
+          depthWrite={false}
+          uniforms={{ uOpacity: { value: OPACITY * 0.12 } }}
+          vertexShader={`
+            attribute float aSize;
+            attribute float aType;
+            varying float vType;
+            void main() {
+              vType = aType;
+              vec4 mvPos = modelViewMatrix * vec4(position, 1.0);
+              gl_PointSize = aSize * (300.0 / -mvPos.z);
+              gl_Position = projectionMatrix * mvPos;
+            }
+          `}
+          fragmentShader={`
+            uniform float uOpacity;
+            varying float vType;
+            void main() {
+              vec2 uv = gl_PointCoord * 2.0 - 1.0;
+              float dist = length(uv);
+              if (dist > 1.0) discard;
+              float alpha;
+              if (vType < 0.5) {
+                alpha = smoothstep(1.0, 0.9, dist) * uOpacity;
+              } else {
+                float ring = smoothstep(1.0, 0.88, dist) - smoothstep(0.82, 0.7, dist);
+                alpha = ring * uOpacity * 1.4;
+              }
+              if (alpha < 0.001) discard;
+              gl_FragColor = vec4(1.0, 1.0, 1.0, alpha);
+            }
+          `}
         />
       </points>
     </group>
