@@ -62,6 +62,9 @@ export default function GlitchEffect() {
       if (isRunning.current) return;
       isRunning.current = true;
 
+      // Notify custom cursor to pulse
+      window.dispatchEvent(new Event('glitch-trigger'));
+
       const wrapper = document.querySelector('.content-wrapper');
       if (!wrapper) { isRunning.current = false; return; }
 
