@@ -1,6 +1,29 @@
 export default function ResumeButton() {
+  const handleDownload = async () => {
+    const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+    const pdfFiles = import.meta.glob("/public/data/*.pdf", { eager: false, query: "?url", import: "default" });
+    let url;
+    const keys = Object.keys(pdfFiles);
+    if (keys.length > 0) {
+      const fileName = keys[0].replace("/public/data/", "");
+      url = `${base}/data/${fileName}`;
+    } else {
+      url = `${base}/data/resume.pdf`;
+    }
+    const response = await fetch(url);
+    const blob = await response.blob();
+    const blobUrl = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = blobUrl;
+    link.download = "Resume - Heshan Wickramaratne (Software Engineer).pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(blobUrl);
+  };
+
   return (
-    <a href={`${import.meta.env.BASE_URL}data/resume.pdf`} download="Resume - Heshan Wickramaratne (Software Engineer).pdf" className="resume-button">
+    <button onClick={handleDownload} className="resume-button">
       <span>RESUME</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,6 +41,6 @@ export default function ResumeButton() {
         <polyline points="7 10 12 15 17 10" />
         <line x1="12" y1="15" x2="12" y2="3" />
       </svg>
-    </a>
+    </button>
   );
 }
