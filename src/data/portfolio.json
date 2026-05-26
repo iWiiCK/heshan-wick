@@ -10,17 +10,17 @@
     "greeting": "Hello, I'm",
     "firstName": "HESHAN",
     "lastName": "",
-    "subtitle": "Software Engineer — Full Stack | Cloud | DevOps | 3D Graphics",
-    "description": "5+ years designing and delivering cloud-native platforms and DevOps automation systems. Core contributor to production SaaS platforms, building scalable microservices and CI/CD-driven infrastructure.",
+    "subtitle": "Software Engineer — Full Stack | Cloud-Native Systems | DevOps Engineering",
+    "description": "Software Engineer with 5+ years of experience designing and building scalable full-stack applications, cloud-native platforms, and distributed backend systems within fast-paced product engineering environments.",
     "scrollCta": "Scroll to explore"
   },
   "about": {
     "sectionNumber": "01",
     "title": "ABOUT",
     "bio": [
-      "Software Engineer with 5+ years of experience designing and delivering cloud-native platforms and DevOps automation systems. Core contributor to a production SaaS platform (SkyU), building scalable microservices and CI/CD-driven infrastructure using AWS, Node.js, Go, and React.",
-      "Experienced in system design, API architecture, and improving engineering efficiency through automation and cloud-native practices. Published author with research in system design and technical communication.",
-      "Beyond engineering, I'm a competitive swimmer of 19+ years, a street dancer, calisthenics artist, and pianist."
+      "Software Engineer with 5+ years of experience designing and building scalable full-stack applications, cloud-native platforms, and distributed backend systems within fast-paced product engineering environments. Experienced across TypeScript, Node.js, Go, React, AWS, Docker, Kubernetes, and CI/CD automation.",
+      "Core contributor to a production SaaS platform (SkyU), delivering scalable microservices, deployment automation, and modern engineering workflows for Australian clients. Published author with research in system design and technical communication.",
+      "Beyond engineering, I'm a competitive swimmer of 19+ years, ILS certified life guard, street dancer, calisthenics artist, and pianist."
     ],
     "highlights": [
       { "value": "5+", "label": "Years Experience" },
@@ -35,26 +35,26 @@
       {
         "company": "Insighture",
         "role": "Software Engineer — Consultant",
-        "period": "Jul 2024 — Present",
+        "period": "Jul 2024 — Jun 2026",
         "location": "Melbourne, AU — Part Time",
-        "description": "Contributed to the ongoing development and optimisation of SkyU, enhancing DevOps automation workflows and supporting client migrations to the platform. Integrated AI-driven document processing capabilities using AWS Bedrock, improving automation of document analysis within the Realtime Conveyancer product.",
-        "technologies": ["AWS Bedrock", "Node.js", "React", "TypeScript", "DevOps"]
+        "description": "Contributed to the ongoing development and optimisation of SkyU, supporting scalable cloud-native platform capabilities and DevOps automation initiatives. Developed backend services and API-driven microservices using Node.js, Go, AWS, and modern distributed architectural patterns. Participated in CI/CD automation, deployment workflows, containerisation, and engineering process improvements using Docker and GitHub Actions. Integrated AI-driven document processing capabilities using AWS Bedrock within production systems.",
+        "technologies": ["Node.js", "Go", "React", "TypeScript", "AWS", "AWS Bedrock", "Docker", "GitHub Actions", "CI/CD"]
       },
       {
         "company": "Insighture",
         "role": "Software Engineer",
         "period": "Jun 2023 — Jul 2024",
         "location": "Colombo, SL — Permanent",
-        "description": "Core developer on SkyU, a DevOps automation platform, building production-grade microservices using Node.js, NestJS, Go, and AWS. Designed and implemented API-driven microservices using cloud-native patterns, improving system scalability, modularity, and deployment efficiency. Developed full-stack features using React and TypeScript, integrating frontend systems with backend services and CI/CD pipelines. Contributed to taking a product from concept to market within a fixed timeline.",
-        "technologies": ["Go", "NestJS", "Node.js", "React", "TypeScript", "AWS", "Docker", "GitHub Actions"]
+        "description": "Head hunted after graduation as part of a team put together to create and take a product (SkyU) to market (Target audience in Melbourne Australia) within a fixed time. Core developer on SkyU, contributing to the design and delivery of scalable full-stack applications and cloud-native backend systems. Developed backend services and API-driven microservices using Node.js, NestJS, Go, AWS, and cloud-native architectural patterns. Developed frontend features using React and TypeScript, integrating user-facing applications with backend services and cloud infrastructure components. Contributed to systems design discussions focused on scalability, maintainability, deployment efficiency, and platform reliability. Participated in CI/CD automation, deployment optimisation, containerisation, and engineering process improvements within agile product environments.",
+        "technologies": ["Node.js", "NestJS", "Go", "React", "TypeScript", "AWS", "Docker", "GitHub Actions", "CI/CD"]
       },
       {
         "company": "99x",
         "role": "Trainee Software Engineer",
         "period": "Jul 2021 — Jul 2022",
         "location": "Colombo, SL — Internship",
-        "description": "Awarded Most Outstanding Intern (2021) for exceptional technical contribution and ownership. Contributed to full-stack development of internal systems using React, Node.js, Java, and AWS. Built and integrated features using serverless architectures. Developed interactive 3D web components using Three.js for internal applications.",
-        "technologies": ["React", "Node.js", "Java", "AWS", "Serverless", "Three.js"]
+        "description": "Awarded Most Outstanding Intern (2021) for exceptional technical contribution and ownership. Contributed to full-stack development of internal systems using React, Node.js, Java, and AWS. Built and integrated features using serverless architectures, improving scalability and maintainability. Developed interactive 3D web components using Three.js for internal applications.",
+        "technologies": ["React", "Node.js", "Java", "AWS", "Serverless", "Three.js", "Full-stack"]
       }
     ]
   },
@@ -62,12 +62,13 @@
     "sectionNumber": "03",
     "title": "KEY ACHIEVEMENTS",
     "items": [
-      "Core contributor to SkyU, a production DevOps automation platform, building scalable microservices and cloud-native infrastructure used to streamline CI/CD workflows for multiple clients.",
-      "Designed and implemented API-driven microservices using event-driven and serverless patterns, improving system scalability and deployment efficiency.",
-      "Built and optimised CI/CD pipelines using Docker and GitHub Actions, reducing manual deployment effort and improving release reliability.",
-      "Awarded Most Outstanding Intern (99x) for exceptional technical contribution across full-stack and cloud engineering initiatives.",
-      "Published author (Documon, ICSCCM 2023, SPIE), demonstrating strong research, system design, and technical communication skills.",
-      "Valedictorian and Gold Medallist — BSc. Software Engineering, Class of 2023."
+      "Core contributor to SkyU, a production cloud-native automation platform, helping deliver scalable backend systems and full-stack platform capabilities for multiple clients.",
+      "Designed and implemented API-driven microservices and distributed backend services using modern cloud-native architectural patterns.",
+      "Built and optimised CI/CD pipelines, deployment workflows, and containerised cloud infrastructure using Docker, Kubernetes, and GitHub Actions.",
+      "Developed full-stack platform features using React and TypeScript, integrating frontend applications with backend services and cloud infrastructure.",
+      "Integrated AI-driven document processing capabilities using AWS Bedrock within production systems.",
+      "Awarded Most Outstanding Intern (99x) for exceptional technical contribution, ownership, and engineering initiative.",
+      "Published author (Documon, ICSCCM 2023, SPIE), demonstrating strong technical communication, systems thinking, and research capability."
     ]
   },
   "education": {
@@ -77,10 +78,10 @@
       {
         "institution": "RMIT University",
         "degree": "Master of IT (MSc)",
-        "result": "In Progress",
-        "period": "2024 — Present",
+        "result": "Completed",
+        "period": "2024 — 2026",
         "location": "Melbourne, Australia",
-        "notes": "Specializing in Cloud Computing and Big Data Processing. Student Peer Mentor and Study Buddy for Neuro Divergent Students"
+        "notes": "Specialisation: Cloud Computing, Distributed Systems, and Big Data Processing"
       },
       {
         "institution": "University of Central Lancashire",
@@ -98,23 +99,27 @@
     "categories": [
       {
         "name": "Languages",
-        "items": ["JavaScript", "TypeScript", "Go", "C#", "Java", "Python"]
+        "items": ["TypeScript", "JavaScript", "Go", "Python", "C#", "Java"]
       },
       {
         "name": "Frameworks",
-        "items": ["React", "Next.js", "Node.js", "NestJS", ".NET", "Three.js"]
+        "items": ["React", "Next.js", "TypeScript"]
       },
       {
         "name": "Cloud & DevOps",
-        "items": ["AWS", "Azure", "GCP", "Docker", "Kubernetes", "GitHub Actions"]
+        "items": ["AWS", "Docker", "Kubernetes", "GitHub Actions", "CI/CD", "Infrastructure Automation"]
       },
       {
         "name": "Databases",
         "items": ["PostgreSQL", "MySQL", "MongoDB", "DynamoDB"]
       },
       {
-        "name": "Tools",
-        "items": ["Git", "GitHub", "GitLab", "Figma", "Blender"]
+        "name": "Tools & Practices",
+        "items": ["Git", "GitHub", "Agile Development", "System Design", "Distributed Systems"]
+      },
+      {
+        "name": "AI & Automation",
+        "items": ["AWS Bedrock", "AI-assisted engineering workflows"]
       }
     ]
   },
