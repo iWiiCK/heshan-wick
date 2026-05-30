@@ -4,7 +4,7 @@
     "shortName": "iwiick",
     "title": "Software Engineer",
     "siteTitle": "iwiick Portfolio",
-    "description": "Software Engineer with 5+ years of experience in full-stack development, cloud-native platforms, DevOps automation, and 3D graphics."
+    "description": "Software Engineer with 5+ years of experience designing and building scalable full-stack applications, cloud-native platforms, and distributed backend systems."
   },
   "hero": {
     "greeting": "Hello, I'm",
@@ -20,7 +20,7 @@
     "bio": [
       "Software Engineer with 5+ years of experience designing and building scalable full-stack applications, cloud-native platforms, and distributed backend systems within fast-paced product engineering environments. Experienced across TypeScript, Node.js, Go, React, AWS, Docker, Kubernetes, and CI/CD automation.",
       "Core contributor to a production SaaS platform (SkyU), delivering scalable microservices, deployment automation, and modern engineering workflows for Australian clients. Published author with research in system design and technical communication.",
-      "Beyond engineering, I'm a competitive swimmer of 19+ years, ILS certified life guard, street dancer, calisthenics artist, and pianist."
+      "Beyond engineering, I'm a competitive swimmer of 19+ years, ILS certified lifeguard, and enjoy generative art, 3D modelling, creative coding, fitness and music."
     ],
     "highlights": [
       { "value": "5+", "label": "Years Experience" },
@@ -36,7 +36,7 @@
         "company": "Insighture",
         "role": "Software Engineer — Consultant",
         "period": "Jul 2024 — Jun 2026",
-        "location": "Melbourne, AU — Part Time",
+        "location": "Melbourne, AU — Contract",
         "description": "Contributed to the ongoing development and optimisation of SkyU, supporting scalable cloud-native platform capabilities and DevOps automation initiatives. Developed backend services and API-driven microservices using Node.js, Go, AWS, and modern distributed architectural patterns. Participated in CI/CD automation, deployment workflows, containerisation, and engineering process improvements using Docker and GitHub Actions. Integrated AI-driven document processing capabilities using AWS Bedrock within production systems.",
         "technologies": ["Node.js", "Go", "React", "TypeScript", "AWS", "AWS Bedrock", "Docker", "GitHub Actions", "CI/CD"]
       },
@@ -102,24 +102,32 @@
         "items": ["TypeScript", "JavaScript", "Go", "Python", "C#", "Java"]
       },
       {
-        "name": "Frameworks",
-        "items": ["React", "Next.js", "TypeScript"]
+        "name": "Frontend",
+        "items": ["React", "Next.js", "TypeScript", "HTML5", "CSS3"]
+      },
+      {
+        "name": "Backend",
+        "items": ["Node.js", "NestJS", ".NET (C#)", "Gin", "REST APIs", "Microservices"]
       },
       {
         "name": "Cloud & DevOps",
-        "items": ["AWS", "Docker", "Kubernetes", "GitHub Actions", "CI/CD", "Infrastructure Automation"]
+        "items": ["AWS", "Docker", "Kubernetes", "GitHub Actions", "CI/CD", "Infrastructure Automation", "Linux"]
       },
       {
         "name": "Databases",
         "items": ["PostgreSQL", "MySQL", "MongoDB", "DynamoDB"]
       },
       {
+        "name": "Architecture & Engineering",
+        "items": ["Distributed Systems", "System Design", "API Design", "Scalable Web Applications", "Cloud-Native Architecture"]
+      },
+      {
         "name": "Tools & Practices",
-        "items": ["Git", "GitHub", "Agile Development", "System Design", "Distributed Systems"]
+        "items": ["Git", "GitHub", "Agile Development", "Scrum", "Testing", "Code Reviews", "CI/CD Pipelines"]
       },
       {
         "name": "AI & Automation",
-        "items": ["AWS Bedrock", "AI-assisted engineering workflows"]
+        "items": ["AWS Bedrock", "GitHub Copilot", "Claude", "AI-assisted engineering workflows"]
       }
     ]
   },
@@ -138,6 +146,6 @@
   },
   "footer": {
     "text": "Designed & Built by Heshan Wickramaratne",
-    "year": "2025"
+    "year": "2026"
   }
 }
