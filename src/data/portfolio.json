@@ -93,8 +93,44 @@
       }
     ]
   },
-  "skills": {
+  "recommendations": {
     "sectionNumber": "05",
+    "title": "RECOMMENDATIONS",
+    "items": [
+      {
+        "name": "Sarah Mitchell",
+        "designation": "Engineering Manager",
+        "company": "Insighture",
+        "text": "Heshan consistently delivered high-quality code and demonstrated exceptional problem-solving abilities. His contributions to our cloud-native platform were invaluable, and his ability to mentor junior developers while delivering complex features made him a key asset to our team."
+      },
+      {
+        "name": "James Chen",
+        "designation": "Senior Tech Lead",
+        "company": "SkyU Platform",
+        "text": "Working with Heshan was a pleasure. His deep understanding of distributed systems and cloud architecture helped us scale our microservices infrastructure significantly. He brings both technical excellence and great collaboration skills to every project."
+      },
+      {
+        "name": "Priya Sharma",
+        "designation": "Product Manager",
+        "company": "Insighture",
+        "text": "Heshan's ability to translate complex technical requirements into scalable solutions is remarkable. He played a crucial role in taking our product from concept to market within a challenging timeline, always maintaining high code quality standards."
+      },
+      {
+        "name": "David Thompson",
+        "designation": "CTO",
+        "company": "TechStart Inc",
+        "text": "Heshan is one of the most dedicated engineers I've worked with. His expertise in DevOps practices and CI/CD automation transformed our deployment pipelines, reducing release times by 60%. Highly recommend for any cloud-native initiatives."
+      },
+      {
+        "name": "Emma Wilson",
+        "designation": "Senior Developer",
+        "company": "99x",
+        "text": "During his internship, Heshan showed incredible growth and initiative. His work on the 3D visualization components and serverless architectures exceeded our expectations. Truly deserving of the Most Outstanding Intern award."
+      }
+    ]
+  },
+  "skills": {
+    "sectionNumber": "06",
     "title": "EXPERTISE",
     "categories": [
       {

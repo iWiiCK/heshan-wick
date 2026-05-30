@@ -798,6 +798,220 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ========================================
+   RECOMMENDATIONS SECTION
+   ======================================== */
+.recommendations-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recommendations-track {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  user-select: none;
+  overflow: visible;
+}
+
+.recommendations-track:active {
+  cursor: grabbing;
+}
+
+.recommendations-card-wrapper {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+.recommendations-card {
+  padding: 2.5rem;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.recommendations-card-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.recommendations-name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.recommendations-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.recommendations-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  padding: 0.35rem 0.7rem;
+  background: var(--color-background-alt);
+  border-radius: 2px;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.recommendations-company {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.03em;
+}
+
+.recommendations-company::before {
+  content: "@ ";
+  color: var(--color-text-muted);
+}
+
+.recommendations-text {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.9;
+  font-weight: 300;
+  font-style: italic;
+  flex-grow: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.recommendations-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+}
+
+.recommendations-nav:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-border-light);
+  color: var(--color-text);
+}
+
+.recommendations-nav svg {
+  width: 20px;
+  height: 20px;
+}
+
+.recommendations-nav-prev {
+  left: 1rem;
+}
+
+.recommendations-nav-next {
+  right: 1rem;
+}
+
+.recommendations-dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.75rem;
+  z-index: 20;
+}
+
+.recommendations-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-border-light);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.recommendations-dot:hover {
+  background: var(--color-text-muted);
+}
+
+.recommendations-dot.active {
+  background: var(--color-text);
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .recommendations-carousel {
+    padding: 1rem 0;
+  }
+
+  .recommendations-track {
+    height: 380px;
+  }
+
+  .recommendations-card-wrapper {
+    max-width: 320px;
+  }
+
+  .recommendations-card {
+    padding: 1.75rem;
+    min-height: 280px;
+  }
+
+  .recommendations-name {
+    font-size: 1.1rem;
+  }
+
+  .recommendations-text {
+    font-size: 0.9rem;
+  }
+
+  .recommendations-nav {
+    width: 40px;
+    height: 40px;
+    display: none;
+  }
+
+  .recommendations-nav-prev {
+    left: 0.5rem;
+  }
+
+  .recommendations-nav-next {
+    right: 0.5rem;
+  }
+}
+
+/* ========================================
    CONTACT SECTION
    ======================================== */
 .contact {
