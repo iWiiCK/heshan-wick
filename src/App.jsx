@@ -10,14 +10,13 @@ import About from './components/About';
 import Experience from './components/Experience';
 import Achievements from './components/Achievements';
 import Skills from './components/Skills';
-import Recommendations from './components/Recommendations';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import GlitchEffect from './components/GlitchEffect';
 import ResumeButton from './components/ResumeButton';
 import CustomCursor from './components/CustomCursor';
 
-const sectionIds = ['hero', 'about', 'experience', 'achievements', 'recommendations', 'skills', 'contact'];
+const sectionIds = ['hero', 'about', 'experience', 'achievements', 'education', 'skills', 'contact'];
 
 export default function App() {
   const [threeReady, setThreeReady] = useState(false);
@@ -111,7 +110,6 @@ export default function App() {
         <Experience />
         <Achievements />
         <Skills />
-        <Recommendations />
         <Contact />
         <Footer />
       </main>

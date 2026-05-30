@@ -1,4 +1,4 @@
-const sectionIds = ['hero', 'about', 'experience', 'achievements', 'recommendations', 'skills', 'contact'];
+const sectionIds = ['hero', 'about', 'experience', 'achievements', 'education', 'skills', 'contact'];
 
 export default function SectionIndicator({ currentSection }) {
   const scrollTo = (id) => {
