@@ -38,7 +38,17 @@
         "period": "Jul 2024 — Jun 2026",
         "location": "Melbourne, AU — Contract",
         "description": "Contributed to the ongoing development and optimisation of SkyU, supporting scalable cloud-native platform capabilities and DevOps automation initiatives. Developed backend services and API-driven microservices using Node.js, Go, AWS, and modern distributed architectural patterns. Participated in CI/CD automation, deployment workflows, containerisation, and engineering process improvements using Docker and GitHub Actions. Integrated AI-driven document processing capabilities using AWS Bedrock within production systems.",
-        "technologies": ["Node.js", "Go", "React", "TypeScript", "AWS", "AWS Bedrock", "Docker", "GitHub Actions", "CI/CD"]
+        "technologies": [
+          "Node.js",
+          "Go",
+          "React",
+          "TypeScript",
+          "AWS",
+          "AWS Bedrock",
+          "Docker",
+          "GitHub Actions",
+          "CI/CD"
+        ]
       },
       {
         "company": "Insighture",
@@ -46,7 +56,17 @@
         "period": "Jun 2023 — Jul 2024",
         "location": "Colombo, SL — Permanent",
         "description": "Head hunted after graduation as part of a team put together to create and take a product (SkyU) to market (Target audience in Melbourne Australia) within a fixed time. Core developer on SkyU, contributing to the design and delivery of scalable full-stack applications and cloud-native backend systems. Developed backend services and API-driven microservices using Node.js, NestJS, Go, AWS, and cloud-native architectural patterns. Developed frontend features using React and TypeScript, integrating user-facing applications with backend services and cloud infrastructure components. Contributed to systems design discussions focused on scalability, maintainability, deployment efficiency, and platform reliability. Participated in CI/CD automation, deployment optimisation, containerisation, and engineering process improvements within agile product environments.",
-        "technologies": ["Node.js", "NestJS", "Go", "React", "TypeScript", "AWS", "Docker", "GitHub Actions", "CI/CD"]
+        "technologies": [
+          "Node.js",
+          "NestJS",
+          "Go",
+          "React",
+          "TypeScript",
+          "AWS",
+          "Docker",
+          "GitHub Actions",
+          "CI/CD"
+        ]
       },
       {
         "company": "99x",
@@ -54,7 +74,15 @@
         "period": "Jul 2021 — Jul 2022",
         "location": "Colombo, SL — Internship",
         "description": "Awarded Most Outstanding Intern (2021) for exceptional technical contribution and ownership. Contributed to full-stack development of internal systems using React, Node.js, Java, and AWS. Built and integrated features using serverless architectures, improving scalability and maintainability. Developed interactive 3D web components using Three.js for internal applications.",
-        "technologies": ["React", "Node.js", "Java", "AWS", "Serverless", "Three.js", "Full-stack"]
+        "technologies": [
+          "React",
+          "Node.js",
+          "Java",
+          "AWS",
+          "Serverless",
+          "Three.js",
+          "Full-stack"
+        ]
       }
     ]
   },
@@ -99,7 +127,18 @@
     "categories": [
       {
         "name": "Languages",
-        "items": ["TypeScript", "JavaScript", "Go", "Python", "C#", "Java"]
+        "items": [
+          "TypeScript",
+          "JavaScript",
+          "Go",
+          "Python",
+          "C#",
+          "Java",
+          "C++",
+          "Ruby",
+          "Dafny",
+          "SQL"
+        ]
       },
       {
         "name": "Frontend",
@@ -107,11 +146,26 @@
       },
       {
         "name": "Backend",
-        "items": ["Node.js", "NestJS", ".NET (C#)", "Gin", "REST APIs", "Microservices"]
+        "items": [
+          "Node.js",
+          "NestJS",
+          ".NET (C#)",
+          "Gin",
+          "REST APIs",
+          "Microservices"
+        ]
       },
       {
         "name": "Cloud & DevOps",
-        "items": ["AWS", "Docker", "Kubernetes", "GitHub Actions", "CI/CD", "Infrastructure Automation", "Linux"]
+        "items": [
+          "AWS",
+          "Docker",
+          "Kubernetes",
+          "GitHub Actions",
+          "CI/CD",
+          "Infrastructure Automation",
+          "Linux"
+        ]
       },
       {
         "name": "Databases",
@@ -119,15 +173,34 @@
       },
       {
         "name": "Architecture & Engineering",
-        "items": ["Distributed Systems", "System Design", "API Design", "Scalable Web Applications", "Cloud-Native Architecture"]
+        "items": [
+          "Distributed Systems",
+          "System Design",
+          "API Design",
+          "Scalable Web Applications",
+          "Cloud-Native Architecture"
+        ]
       },
       {
         "name": "Tools & Practices",
-        "items": ["Git", "GitHub", "Agile Development", "Scrum", "Testing", "Code Reviews", "CI/CD Pipelines"]
+        "items": [
+          "Git",
+          "GitHub",
+          "Agile Development",
+          "Scrum",
+          "Testing",
+          "Code Reviews",
+          "CI/CD Pipelines"
+        ]
       },
       {
         "name": "AI & Automation",
-        "items": ["AWS Bedrock", "GitHub Copilot", "Claude", "AI-assisted engineering workflows"]
+        "items": [
+          "AWS Bedrock",
+          "GitHub Copilot",
+          "Claude",
+          "AI-assisted engineering workflows"
+        ]
       }
     ]
   },
@@ -137,11 +210,31 @@
     "description": "Always open to new opportunities, collaborations, or a good conversation about technology, design, and engineering.",
     "email": "heshanwick2000@gmail.com",
     "socials": [
-      { "platform": "GitHub", "url": "https://github.com/iWiiCK", "handle": "@iWiiCK" },
-      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/heshan-wickramaratne/", "handle": "heshan-wickramaratne" },
-      { "platform": "Stack Overflow", "url": "https://stackoverflow.com/users/13370488/iwiick", "handle": "iWiiCK" },
-      { "platform": "Medium", "url": "https://medium.com/@iwiick", "handle": "@iwiick" },
-      { "platform": "Instagram", "url": "https://www.instagram.com/iwiick", "handle": "@iwiick" }
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/iWiiCK",
+        "handle": "@iWiiCK"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://www.linkedin.com/in/heshan-wickramaratne/",
+        "handle": "heshan-wickramaratne"
+      },
+      {
+        "platform": "Stack Overflow",
+        "url": "https://stackoverflow.com/users/13370488/iwiick",
+        "handle": "iWiiCK"
+      },
+      {
+        "platform": "Medium",
+        "url": "https://medium.com/@iwiick",
+        "handle": "@iwiick"
+      },
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/iwiick",
+        "handle": "@iwiick"
+      }
     ]
   },
   "footer": {
