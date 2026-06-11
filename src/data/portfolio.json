@@ -4,22 +4,22 @@
     "shortName": "iwiick",
     "title": "Software Engineer",
     "siteTitle": "iwiick Portfolio",
-    "description": "Software Engineer with 5+ years of experience designing and building scalable full-stack applications, cloud-native platforms, and distributed backend systems."
+    "description": "Software Engineer with 5+ years of experience designing and building scalable full-stack applications, cloud-native platforms, AI-enabled systems, and distributed backend services."
   },
   "hero": {
     "greeting": "Hello, I'm",
     "firstName": "HESHAN",
     "lastName": "",
     "subtitle": "Software Engineer — Full Stack | Cloud-Native Systems | DevOps Engineering",
-    "description": "Software Engineer with 5+ years of experience designing and building scalable full-stack applications, cloud-native platforms, and distributed backend systems within fast-paced product engineering environments.",
+    "description": "Software Engineer with 5+ years of experience designing and building scalable full-stack applications, cloud-native platforms, AI-enabled systems, and distributed backend services.",
     "scrollCta": "Scroll to explore"
   },
   "about": {
     "sectionNumber": "01",
     "title": "ABOUT",
     "bio": [
-      "Software Engineer with 5+ years of experience designing and building scalable full-stack applications, cloud-native platforms, and distributed backend systems within fast-paced product engineering environments. Experienced across TypeScript, Node.js, Go, React, AWS, Docker, Kubernetes, and CI/CD automation.",
-      "Core contributor to a production SaaS platform (SkyU), delivering scalable microservices, deployment automation, and modern engineering workflows for Australian clients. Published author with research in system design and technical communication.",
+      "Software Engineer with 5+ years of experience designing and building scalable full-stack applications, cloud-native platforms, AI-enabled systems, and distributed backend services. Experienced across TypeScript, Node.js, Go, React, AWS, Docker, Kubernetes, and CI/CD automation, with strengths in backend engineering, cloud-native architecture, DevOps practices, and generative AI applications using AWS Bedrock.",
+      "Contributed to production SaaS platforms including SkyU and GrantReady, delivering scalable microservices, deployment automation, and AI-powered workflow solutions for Australian organisations. Published author with research in system design and technical communication.",
       "Beyond engineering, I'm a competitive swimmer of 19+ years, ILS certified lifeguard, and enjoy generative art, 3D modelling, creative coding, fitness and music."
     ],
     "highlights": [
@@ -32,6 +32,26 @@
     "sectionNumber": "02",
     "title": "EXPERIENCE",
     "items": [
+      {
+        "company": "GrantReady",
+        "role": "Lead Software Engineer",
+        "period": "Mar 2026 — Jun 2026",
+        "location": "Melbourne, AU — Contract",
+        "description": "Led the design and development of an AI-enabled SaaS platform supporting the preparation and submission of Australian R&D Tax Incentive (RDTI) claims. Designed and implemented Retrieval-Augmented Generation (RAG) workflows using AWS Bedrock Knowledge Bases and Anthropic Claude to provide source-grounded document intelligence and grant drafting capabilities. Developed full-stack platform features using React, Next.js, TypeScript, Node.js, Python, SQL, and REST-based microservices architecture. Designed secure multi-tenant application workflows including role-based access controls, audit logging, document management, and compliance-focused approval processes. Built cloud-native deployment workflows using AWS, Docker, CloudFormation scripts, GitHub Actions, and modern CI/CD practices.",
+        "technologies": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Node.js",
+          "Python",
+          "AWS Bedrock",
+          "RAG",
+          "AWS",
+          "Docker",
+          "CloudFormation",
+          "GitHub Actions"
+        ]
+      },
       {
         "company": "Insighture",
         "role": "Software Engineer — Consultant",
@@ -94,7 +114,7 @@
       "Designed and implemented API-driven microservices and distributed backend services using modern cloud-native architectural patterns.",
       "Built and optimised CI/CD pipelines, deployment workflows, and containerised cloud infrastructure using Docker, Kubernetes, and GitHub Actions.",
       "Developed full-stack platform features using React and TypeScript, integrating frontend applications with backend services and cloud infrastructure.",
-      "Integrated AI-driven document processing capabilities using AWS Bedrock within production systems.",
+      "Led development of an AI-powered RDTI claims platform, implementing AWS Bedrock Knowledge Bases, RAG architecture, and secure multi-tenant cloud-native application workflows.",
       "Awarded Most Outstanding Intern (99x) for exceptional technical contribution, ownership, and engineering initiative.",
       "Published author (Documon, ICSCCM 2023, SPIE), demonstrating strong technical communication, systems thinking, and research capability."
     ]
@@ -197,8 +217,10 @@
         "name": "AI & Automation",
         "items": [
           "AWS Bedrock",
+          "Bedrock Knowledge Bases",
+          "Retrieval-Augmented Generation (RAG)",
+          "Anthropic Claude",
           "GitHub Copilot",
-          "Claude",
           "AI-assisted engineering workflows"
         ]
       }
