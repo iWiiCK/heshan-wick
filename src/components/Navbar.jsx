@@ -1,6 +1,6 @@
 import portfolio from '../data/portfolio.json';
 
-const sections = ['About', 'Experience', 'Skills', 'Contact'];
+const sections = ['About', 'Work', 'Experience', 'Skills', 'Contact'];
 
 export default function Navbar({ currentSection }) {
   const scrollToSection = (id) => {

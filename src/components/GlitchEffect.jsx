@@ -147,7 +147,7 @@ export default function GlitchEffect() {
 
     let currentSection = null;
     let ready = false;
-    const sectionIds = ['hero', 'about', 'experience', 'achievements', 'education', 'skills', 'contact'];
+    const sectionIds = ['hero', 'about', 'work', 'experience', 'impact', 'skills', 'recognition', 'education', 'contact'];
     const observers = [];
 
     sectionIds.forEach((id) => {

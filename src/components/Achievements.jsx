@@ -6,7 +6,7 @@ export default function Achievements() {
   const { achievements } = portfolio;
 
   return (
-    <section className="section" id="achievements">
+    <section className="section" id="impact">
       <ScrollReveal>
         <div className="section-header">
           <div className="section-number">[{achievements.sectionNumber}]</div>
