@@ -33,6 +33,23 @@
     "title": "EXPERIENCE",
     "items": [
       {
+        "company": "Brokernote",
+        "role": "Software Engineer",
+        "period": "Jul 2026 — Present",
+        "location": "Melbourne, AU — Contract",
+        "description": "Led the design and development of cloud-native platform capabilities supporting AI-driven insurance broking workflows, compliance processes, and operational efficiency. Designed and implemented scalable backend services, APIs, and distributed system architecture using TypeScript, Node.js, Python, and modern cloud engineering practices. Built AI-powered platform capabilities by integrating Large Language Models (LLMs) and agentic workflows into business processes to improve automation and decision-making. Developed Infrastructure as Code, deployment automation, and CI/CD pipelines to support reliable cloud-native delivery. Partnered directly with founders and cross-functional stakeholders to shape product direction, evaluate technical trade-offs, and deliver scalable production solutions.",
+        "technologies": [
+          "TypeScript",
+          "Node.js",
+          "Python",
+          "LLMs",
+          "Agentic Workflows",
+          "AWS",
+          "Infrastructure as Code",
+          "CI/CD"
+        ]
+      },
+      {
         "company": "GrantReady",
         "role": "Software Engineer | Team Lead",
         "period": "Mar 2026 — Jun 2026",
