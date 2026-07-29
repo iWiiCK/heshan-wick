@@ -16,7 +16,7 @@ export default function SelectedWork() {
       <div className="work-list">
         {work.items.map((item, i) => (
           <ScrollReveal key={item.name} delay={Math.min(i + 1, 5)}>
-            <LiquidCard className="work-card">
+            <LiquidCard className="work-card" data-glitch-target="">
               <div className="work-card-header">
                 <h3 className="work-card-name">{item.name}</h3>
                 <span className="work-card-role">{item.role}</span>

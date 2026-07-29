@@ -23,7 +23,7 @@ export default function ResumeButton() {
   };
 
   return (
-    <button onClick={handleDownload} className="resume-button">
+    <button onClick={handleDownload} className="resume-button" data-glitch-target="">
       <span>RESUME</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"

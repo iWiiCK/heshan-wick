@@ -45,25 +45,11 @@ export default function GlitchEffect() {
 
   useEffect(() => {
     const activeWords = new Map();
-    let idleTimeoutId = null;
 
-    const resetIdleTimer = () => {
-      if (idleTimeoutId) clearTimeout(idleTimeoutId);
-      // Random interval between 20000ms (20s) and 40000ms (40s)
-      const delay = Math.random() * 20000 + 20000;
-      idleTimeoutId = setTimeout(() => {
-        triggerGlitch();
-      }, delay);
-    };
-
-    // --- Full-page glitch on click and section change ---
+    // --- Full-page glitch on section change ---
     const triggerGlitch = () => {
-      resetIdleTimer();
       if (isRunning.current) return;
       isRunning.current = true;
-
-      // Notify custom cursor to pulse
-      window.dispatchEvent(new Event('glitch-trigger'));
 
       const wrapper = document.querySelector('.content-wrapper');
       if (!wrapper) { isRunning.current = false; return; }
@@ -166,11 +152,6 @@ export default function GlitchEffect() {
       observer.observe(el);
       observers.push(observer);
     });
-
-    document.addEventListener('click', triggerGlitch);
-
-    // Initialize the idle timer on mount
-    resetIdleTimer();
 
     // --- Per-word hover glitch ---
     const wrapTextInSpans = (el) => {
@@ -333,8 +314,6 @@ export default function GlitchEffect() {
     document.addEventListener('mouseout', handleMouseOut);
 
     return () => {
-      if (idleTimeoutId) clearTimeout(idleTimeoutId);
-      document.removeEventListener('click', triggerGlitch);
       document.removeEventListener('mouseover', handleMouseOver);
       document.removeEventListener('mouseout', handleMouseOut);
       observers.forEach((o) => o.disconnect());

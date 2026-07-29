@@ -16,7 +16,7 @@ export default function Recognition() {
       <div className="recognition-grid">
         {recognition.items.map((item, i) => (
           <ScrollReveal key={item.name} delay={Math.min(i + 1, 5)}>
-            <LiquidCard className="recognition-card">
+            <LiquidCard className="recognition-card" data-glitch-target="">
               <div className="recognition-card-name">{item.name}</div>
               <div className="recognition-card-detail">{item.detail}</div>
             </LiquidCard>

@@ -16,7 +16,7 @@ export default function Education() {
       <div className="education-list">
         {education.items.map((item, i) => (
           <ScrollReveal key={i} delay={1}>
-            <div className="education-item">
+            <div className="education-item" data-glitch-target="">
               <div>
                 <h3 className="education-institution">{item.institution}</h3>
                 <span className="education-period">{item.period}</span>

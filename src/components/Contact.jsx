@@ -14,17 +14,17 @@ export default function Contact() {
         </div>
       </ScrollReveal>
       <ScrollReveal delay={1}>
-        <p className="contact-description">{contact.description}</p>
+        <p className="contact-description" data-glitch-target="">{contact.description}</p>
       </ScrollReveal>
       <ScrollReveal delay={2}>
-        <a href={`mailto:${contact.email}`} className="contact-email">
+        <a href={`mailto:${contact.email}`} className="contact-email" data-glitch-target="">
           {contact.email}
         </a>
       </ScrollReveal>
       <div className="contact-socials">
         {contact.socials.map((social, i) => (
           <ScrollReveal key={social.platform} delay={Math.min(i + 1, 5)}>
-            <LiquidCard className="contact-social-link">
+            <LiquidCard className="contact-social-link" data-glitch-target="">
               <a
                 href={social.url}
                 target="_blank"

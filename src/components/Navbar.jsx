@@ -12,6 +12,7 @@ export default function Navbar({ currentSection }) {
     <nav className="navbar">
       <div
         className="navbar-logo"
+        data-glitch-target=""
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       >
         {portfolio.meta.shortName}
@@ -20,6 +21,7 @@ export default function Navbar({ currentSection }) {
         {sections.map((s) => (
           <span
             key={s}
+            data-glitch-target=""
             className={`navbar-link ${
               currentSection === s.toLowerCase() ? 'active' : ''
             }`}

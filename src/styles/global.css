@@ -695,6 +695,7 @@ h1, h2, h3, h4, h5, h6 {
 .achievements-card {
   padding: 2rem 2rem 2rem 2.5rem;
   min-height: 140px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -846,6 +847,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .skills-category {
   padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .skills-category-name {

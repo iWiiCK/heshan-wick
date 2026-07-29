@@ -16,7 +16,7 @@ export default function Experience() {
       <div className="experience-list">
         {experience.items.map((item, i) => (
           <ScrollReveal key={i} delay={1}>
-            <div className="experience-item">
+            <div className="experience-item" data-glitch-target="">
               <div className="experience-meta">
                 <h3 className="experience-company">{item.company}</h3>
                 <span className="experience-role">{item.role}</span>
