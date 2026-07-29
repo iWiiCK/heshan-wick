@@ -16,7 +16,7 @@ export default function Skills() {
       <div className="skills-grid">
         {skills.categories.map((category, i) => (
           <ScrollReveal key={category.name} delay={Math.min(i + 1, 5)}>
-            <LiquidCard className="skills-category">
+            <LiquidCard className="skills-category" data-glitch-target="">
               <div className="skills-category-name">{category.name}</div>
               <div className="skills-items">
                 {category.items.map((item) => (

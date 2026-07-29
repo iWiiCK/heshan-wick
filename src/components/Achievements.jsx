@@ -6,7 +6,7 @@ export default function Achievements() {
   const { achievements } = portfolio;
 
   return (
-    <section className="section" id="achievements">
+    <section className="section" id="impact">
       <ScrollReveal>
         <div className="section-header">
           <div className="section-number">[{achievements.sectionNumber}]</div>
@@ -16,7 +16,7 @@ export default function Achievements() {
       <div className="achievements-grid">
         {achievements.items.map((item, i) => (
           <ScrollReveal key={i} delay={Math.min(i + 1, 5)}>
-            <LiquidCard className="achievements-card">
+            <LiquidCard className="achievements-card" data-glitch-target="">
               <div className="achievements-card-index">0{i + 1}</div>
               <div className="achievements-card-text">{item}</div>
             </LiquidCard>

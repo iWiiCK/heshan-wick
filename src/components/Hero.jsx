@@ -4,7 +4,7 @@ export default function Hero() {
   const { hero } = portfolio;
 
   return (
-    <section className="hero" id="hero">
+    <section className="hero" id="hero" data-glitch-target="">
       <span className="hero-greeting">{hero.greeting}</span>
       <h1 className="hero-name">
         <span className="hero-name-line">
@@ -19,10 +19,6 @@ export default function Hero() {
       <div className="hero-line-accent" />
       <p className="hero-subtitle">{hero.subtitle}</p>
       <p className="hero-description">{hero.description}</p>
-      <div className="hero-scroll-indicator">
-        <div className="hero-scroll-line" />
-        <span className="hero-scroll-text">{hero.scrollCta}</span>
-      </div>
     </section>
   );
 }

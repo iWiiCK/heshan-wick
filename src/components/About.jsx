@@ -24,7 +24,7 @@ export default function About() {
         <div className="about-highlights">
           {about.highlights.map((item, i) => (
             <ScrollReveal key={i} delay={i + 1}>
-              <LiquidCard className="about-highlight-item">
+              <LiquidCard className="about-highlight-item" data-glitch-target="">
                 <div className="about-highlight-value">{item.value}</div>
                 <div className="about-highlight-label">{item.label}</div>
               </LiquidCard>

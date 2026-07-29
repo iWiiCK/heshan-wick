@@ -7,16 +7,18 @@ import Navbar from './components/Navbar';
 import SectionIndicator from './components/SectionIndicator';
 import Hero from './components/Hero';
 import About from './components/About';
+import SelectedWork from './components/SelectedWork';
 import Experience from './components/Experience';
 import Achievements from './components/Achievements';
 import Skills from './components/Skills';
+import Recognition from './components/Recognition';
+import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import GlitchEffect from './components/GlitchEffect';
 import ResumeButton from './components/ResumeButton';
-import CustomCursor from './components/CustomCursor';
 
-const sectionIds = ['hero', 'about', 'experience', 'achievements', 'education', 'skills', 'contact'];
+const sectionIds = ['hero', 'about', 'work', 'experience', 'impact', 'skills', 'recognition', 'education', 'contact'];
 
 export default function App() {
   const [threeReady, setThreeReady] = useState(false);
@@ -50,15 +52,6 @@ export default function App() {
     return () => {
       lenis.destroy();
     };
-  }, []);
-
-  useEffect(() => {
-    const handleMouse = (e) => {
-      store.mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
-      store.mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
-    };
-    window.addEventListener('mousemove', handleMouse);
-    return () => window.removeEventListener('mousemove', handleMouse);
   }, []);
 
   useEffect(() => {
@@ -97,7 +90,6 @@ export default function App() {
 
   return (
     <>
-      <CustomCursor />
       <Loader ready={threeReady} />
       <GlitchEffect />
       <ThreeScene onCreated={handleThreeCreated} />
@@ -107,9 +99,12 @@ export default function App() {
       <main className="content-wrapper">
         <Hero />
         <About />
+        <SelectedWork />
         <Experience />
         <Achievements />
         <Skills />
+        <Recognition />
+        <Education />
         <Contact />
         <Footer />
       </main>
